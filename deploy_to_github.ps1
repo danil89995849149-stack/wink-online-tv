@@ -3,15 +3,12 @@
 $repoName = "wink-online-tv"
 $user = "danil89995849149-stack"
 
-# Чтение токена из .env или переменных окружения (без хранения в репозитории)
-$token = $env:GITHUB_TOKEN
-if (-not $token -and (Test-Path ".env")) {
-    Get-Content ".env" | ForEach-Object {
-        if ($_ -match "^\s*GITHUB_TOKEN\s*=\s*(.+)$") {
-            $token = $matches[1].Trim()
-        }
-    }
-}
-
 Write-Host "=== Push to GitHub: $user/$repoName ===" -ForegroundColor Cyan
-git push -u origin main
+git -c credential.helper="" push origin main
+
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "=== PUSH SUCCESSFUL! ===" -ForegroundColor Green
+    Write-Host "Repository: https://github.com/$user/$repoName" -ForegroundColor Green
+} else {
+    Write-Host "[ERROR] Push failed" -ForegroundColor Red
+}
