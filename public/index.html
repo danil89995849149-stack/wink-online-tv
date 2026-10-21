@@ -203,6 +203,23 @@
     .channel-row.active .channel-row-name {
       color: #93c5fd !important;
     }
+    .channel-row-name {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+    }
+    .channel-row-name-text {
+      font-size: 0.92rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      line-height: 1.25 !important;
+    }
+    .channel-row.active .channel-row-name-text {
+      color: #93c5fd !important;
+    }
     .channel-row-prog {
       font-size: 0.76rem !important;
       color: #94a3b8 !important;
@@ -211,19 +228,63 @@
       text-overflow: ellipsis !important;
       line-height: 1.2 !important;
     }
-    .channel-row-fav {
-      background: transparent !important;
-      border: none !important;
-      color: #64748b !important;
-      font-size: 1rem !important;
-      cursor: pointer !important;
-      padding: 4px !important;
+    .badge-hd {
+      display: inline-block !important;
+      font-size: 0.62rem !important;
+      font-weight: 900 !important;
+      padding: 1px 5px !important;
+      border-radius: 4px !important;
+      background: linear-gradient(135deg, #7c3aed, #db2777) !important;
+      color: #ffffff !important;
+      letter-spacing: 0.5px !important;
+      line-height: 1.2 !important;
       flex-shrink: 0 !important;
-      transition: color 0.15s ease !important;
     }
-    .channel-row-fav:hover,
-    .channel-row-fav.active {
-      color: #fbbf24 !important;
+    .badge-archive {
+      display: inline-block !important;
+      font-size: 0.62rem !important;
+      font-weight: 800 !important;
+      padding: 1px 5px !important;
+      border-radius: 4px !important;
+      background: rgba(16, 185, 129, 0.2) !important;
+      border: 1px solid rgba(16, 185, 129, 0.4) !important;
+      color: #34d399 !important;
+      line-height: 1.2 !important;
+      flex-shrink: 0 !important;
+    }
+    .channels-filter-bar {
+      display: flex !important;
+      gap: 6px !important;
+      padding: 8px 12px !important;
+      background: #0d121f !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+      overflow-x: auto !important;
+      flex-shrink: 0 !important;
+      scrollbar-width: none !important;
+    }
+    .channels-filter-bar::-webkit-scrollbar {
+      display: none !important;
+    }
+    .channel-filter-chip {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      color: #94a3b8 !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      padding: 4px 10px !important;
+      border-radius: 20px !important;
+      cursor: pointer !important;
+      white-space: nowrap !important;
+      transition: all 0.15s ease !important;
+    }
+    .channel-filter-chip:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+      color: #fff !important;
+    }
+    .channel-filter-chip.active {
+      background: rgba(59, 130, 246, 0.25) !important;
+      border-color: #3b82f6 !important;
+      color: #60a5fa !important;
     }
 
     /* ЦЕНТРАЛЬНАЯ ОБЛАСТЬ ПЛЕЕРА */
@@ -370,6 +431,13 @@
           <span class="channels-title">Телеканалы</span>
         </div>
         <span class="channels-count-badge" id="channelsCountBadge">0</span>
+      </div>
+      <!-- Быстрые фильтры каналов: Все, HD, Архив, С программой -->
+      <div class="channels-filter-bar" id="channelsFilterBar">
+        <button class="channel-filter-chip active" data-filter="all">Все</button>
+        <button class="channel-filter-chip" data-filter="hd">HD</button>
+        <button class="channel-filter-chip" data-filter="archive">Архив</button>
+        <button class="channel-filter-chip" data-filter="epg">С программой</button>
       </div>
       <!-- Список каналов (свободный скролл колесиком мыши) -->
       <div class="channels-scroll-list" id="channelListContainer">

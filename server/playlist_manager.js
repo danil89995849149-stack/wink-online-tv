@@ -54,14 +54,14 @@ class PlaylistManager {
   }
 
   loadFromCache() {
+    const mainFile = path.join(config.DATA_DIR, 'wink_channels.json');
     const cacheFile = path.join(config.CACHE_DIR, 'wink_channels.json');
-    const fallbackFile = path.join(config.DATA_DIR, 'wink_channels.json');
 
     let filePath = null;
-    if (fs.existsSync(cacheFile)) {
+    if (fs.existsSync(mainFile)) {
+      filePath = mainFile;
+    } else if (fs.existsSync(cacheFile)) {
       filePath = cacheFile;
-    } else if (fs.existsSync(fallbackFile)) {
-      filePath = fallbackFile;
     }
 
     if (filePath) {
@@ -70,11 +70,11 @@ class PlaylistManager {
         const data = JSON.parse(raw);
         if (data && Array.isArray(data.channels) && data.channels.length > 0) {
           this.setChannels(data.channels, data.updatedAt || Date.now());
-          console.log(`[PlaylistManager] Загружено из кэша (${path.basename(filePath)}): ${this.channels.length} каналов Wink`);
+          console.log(`[PlaylistManager] Загружено каналов из каталога (${path.basename(filePath)}): ${this.channels.length}`);
           return true;
         }
       } catch (e) {
-        console.error('[PlaylistManager] Ошибка чтения кэша:', e.message);
+        console.error('[PlaylistManager] Ошибка чтения каталога:', e.message);
       }
     }
     return false;
@@ -430,28 +430,49 @@ class PlaylistManager {
         }
       }
 
-      const list = this.parseM3UContent(m3uText);
-      if (list.length === 0) {
+      const freshWinkList = this.parseM3UContent(m3uText);
+      if (freshWinkList.length === 0) {
         throw new Error('В плейлисте не найдено подходящих каналов Wink');
       }
 
-      this.setChannels(list, Date.now());
-
-      // Сохраняем в дисковый кэш
-      try {
-        if (!fs.existsSync(config.CACHE_DIR)) {
-          fs.mkdirSync(config.CACHE_DIR, { recursive: true });
+      if (this.channels.length > 0) {
+        // Создаем карту свежих потоков Wink
+        const freshMap = new Map();
+        for (const ch of freshWinkList) {
+          const key = this.normalizeChannelKey(ch.baseName || ch.name);
+          freshMap.set(key, ch);
         }
-        const cacheFile = path.join(config.CACHE_DIR, 'wink_channels.json');
-        fs.writeFileSync(cacheFile, JSON.stringify({
+
+        // Обновляем потоки Wink у существующих каналов
+        for (const existing of this.channels) {
+          if (existing.isWink) {
+            const key = this.normalizeChannelKey(existing.baseName || existing.name);
+            if (freshMap.has(key)) {
+              const fresh = freshMap.get(key);
+              if (Array.isArray(fresh.feeds) && fresh.feeds.length > 0) {
+                const extFeeds = (existing.feeds || []).filter(f => f.isExternal);
+                existing.feeds = [...fresh.feeds, ...extFeeds];
+              }
+            }
+          }
+        }
+        this.lastUpdated = Date.now();
+        console.log(`[PlaylistManager] Успешно синхронизированы потоки Wink. Каталог сохраняет ${this.channels.length} каналов.`);
+      } else {
+        this.setChannels(freshWinkList, Date.now());
+      }
+
+      // Сохраняем актуальный мастер-каталог
+      try {
+        const targetFile = path.join(config.DATA_DIR, 'wink_channels.json');
+        fs.writeFileSync(targetFile, JSON.stringify({
           updatedAt: this.lastUpdated,
           source: config.PLAYLIST_REMOTE_URL,
           totalChannels: this.channels.length,
           channels: this.channels
         }, null, 2), 'utf8');
-        console.log(`[PlaylistManager] Успешно обновлено и закэшировано ${this.channels.length} агрегированных каналов Wink`);
       } catch (saveErr) {
-        console.warn('[PlaylistManager] Ошибка сохранения кэша:', saveErr.message);
+        console.warn('[PlaylistManager] Ошибка сохранения каталога:', saveErr.message);
       }
     } catch (err) {
       this.updateError = err.message;
