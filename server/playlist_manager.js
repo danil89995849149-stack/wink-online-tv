@@ -5,10 +5,26 @@ const path = require('path');
 const config = require('./config');
 const logoProvider = require('./logo_provider');
 
+function slugify(text) {
+  const ru = {
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo', 'ж': 'zh',
+    'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o',
+    'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h', 'ц': 'ts',
+    'ч': 'ch', 'ш': 'sh', 'щ': 'sch', 'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
+  };
+  const s = String(text || '')
+    .toLowerCase()
+    .replace(/[а-яё]/g, char => ru[char] || char)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return s || 'channel';
+}
+
 class PlaylistManager {
   constructor() {
     this.channels = [];
     this.channelMap = new Map(); // id -> channel
+    this.slugMap = new Map();    // slug -> channel
     this.lastUpdated = null;
     this.isUpdating = false;
     this.updateError = null;
@@ -68,8 +84,19 @@ class PlaylistManager {
     this.channels = list;
     this.lastUpdated = timestamp || Date.now();
     this.channelMap.clear();
+    this.slugMap.clear();
     for (const ch of this.channels) {
+      if (!ch.slug) {
+        let baseSlug = slugify(ch.name || ch.baseName || ch.id);
+        let s = baseSlug;
+        let counter = 2;
+        while (this.slugMap.has(s)) {
+          s = `${baseSlug}-${counter++}`;
+        }
+        ch.slug = s;
+      }
       this.channelMap.set(ch.id, ch);
+      this.slugMap.set(ch.slug, ch);
     }
   }
 
@@ -441,6 +468,11 @@ class PlaylistManager {
 
   getChannelById(id) {
     return this.channelMap.get(id) || null;
+  }
+
+  getChannelBySlugOrId(key) {
+    if (!key) return null;
+    return this.slugMap.get(key) || this.channelMap.get(key) || null;
   }
 
   getStatus() {

@@ -139,9 +139,136 @@ async function serveLogo(req, res, parsedUrl) {
   return sendText(res, 404, 'Logo not found');
 }
 
+function serveRobotsTxt(req, res) {
+  const host = req.headers.host || 'localhost:8900';
+  const protocol = req.headers['x-forwarded-proto'] || 'https';
+  const robots = `User-agent: *
+Allow: /
+Allow: /channel/
+Disallow: /p
+Disallow: /api/
+
+Sitemap: ${protocol}://${host}/sitemap.xml
+`;
+  res.writeHead(200, {
+    ...CORS_HEADERS,
+    'Content-Type': 'text/plain; charset=utf-8',
+    'Cache-Control': 'public, max-age=86400'
+  });
+  res.end(robots);
+}
+
+function serveSitemapXml(req, res) {
+  const host = req.headers.host || 'localhost:8900';
+  const protocol = req.headers['x-forwarded-proto'] || 'https';
+  const channels = playlistManager.getAllChannels();
+  const dateStr = new Date().toISOString().split('T')[0];
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${protocol}://${host}/</loc>
+    <lastmod>${dateStr}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>`;
+
+  for (const ch of channels) {
+    const slug = ch.slug || ch.id;
+    xml += `
+  <url>
+    <loc>${protocol}://${host}/channel/${slug}</loc>
+    <lastmod>${dateStr}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+  }
+
+  xml += `\n</urlset>`;
+
+  res.writeHead(200, {
+    ...CORS_HEADERS,
+    'Content-Type': 'application/xml; charset=utf-8',
+    'Cache-Control': 'public, max-age=3600'
+  });
+  res.end(xml);
+}
+
+function serveChannelPage(req, res, slug) {
+  const channel = playlistManager.getChannelBySlugOrId(slug);
+  const indexPath = path.join(config.PUBLIC_DIR, 'index.html');
+  if (!fs.existsSync(indexPath)) {
+    return sendText(res, 404, '404: Not found');
+  }
+
+  let html = fs.readFileSync(indexPath, 'utf8');
+
+  if (channel) {
+    const host = req.headers.host || 'localhost:8900';
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const pageUrl = `${protocol}://${host}/channel/${channel.slug}`;
+    const logoUrl = channel.logo ? `${protocol}://${host}/api/logo?file=${encodeURIComponent(channel.logo)}` : `${protocol}://${host}/favicon.ico`;
+
+    const channelName = channel.baseName || channel.name || 'Телеканал';
+    const channelTitle = `${channelName} смотреть онлайн прямой эфир бесплатно в хорошем качестве HD — Эфир ТВ`;
+    const channelDesc = `Смотрите телеканал ${channelName} онлайн в прямом эфире и в архиве передач до 3 суток. Бесплатный просмотр, актуальная программа передач, умная перемотка.`;
+
+    const schemaJson = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BroadcastEvent",
+      "name": `Прямой эфир: ${channelName}`,
+      "isLiveBroadcast": true,
+      "startDate": new Date().toISOString(),
+      "video": {
+        "@type": "VideoObject",
+        "name": `${channelName} онлайн`,
+        "description": channelDesc,
+        "thumbnailUrl": logoUrl,
+        "uploadDate": new Date().toISOString()
+      }
+    });
+
+    html = html.replace(/<title>.*?<\/title>/i, `<title>${channelTitle}</title>`);
+    html = html.replace(/<meta name="description" content=".*?"\s*\/?>/i, `<meta name="description" content="${channelDesc}">`);
+
+    const extraHead = `
+  <link rel="canonical" href="${pageUrl}">
+  <meta property="og:title" content="${channelTitle}">
+  <meta property="og:description" content="${channelDesc}">
+  <meta property="og:url" content="${pageUrl}">
+  <meta property="og:type" content="video.other">
+  <meta property="og:image" content="${logoUrl}">
+  <script type="application/ld+json">${schemaJson}</script>
+  <script>window.INITIAL_CHANNEL_SLUG = "${channel.slug}"; window.INITIAL_CHANNEL_ID = "${channel.id}";</script>
+`;
+    html = html.replace('</head>', `${extraHead}\n</head>`);
+  }
+
+  res.writeHead(200, {
+    ...CORS_HEADERS,
+    'Content-Type': 'text/html; charset=utf-8',
+    'Cache-Control': 'no-cache'
+  });
+  res.end(html);
+}
+
 const server = http.createServer(async (req, res) => {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const pathname = parsedUrl.pathname;
+
+  // 0. SEO: robots.txt и sitemap.xml
+  if (pathname === '/robots.txt') {
+    return serveRobotsTxt(req, res);
+  }
+  if (pathname === '/sitemap.xml') {
+    return serveSitemapXml(req, res);
+  }
+
+  // 0.1 SEO Посадочные страницы каналов /channel/:slug
+  if (pathname.startsWith('/channel/')) {
+    const slug = pathname.replace('/channel/', '').replace(/\/$/, '');
+    return serveChannelPage(req, res, slug);
+  }
 
   // 1. Стриминговый прокси /p
   if (pathname === '/p') {

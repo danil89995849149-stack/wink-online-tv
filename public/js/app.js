@@ -156,6 +156,14 @@
       if (window.WinkPlaylist) {
         window.WinkPlaylist.highlightActiveCard(channel.id);
       }
+      // Обновляем ЧПУ URL в адресной строке браузера для SEO
+      if (channel && channel.slug && window.history && window.history.pushState) {
+        const targetUrl = '/channel/' + encodeURIComponent(channel.slug);
+        if (window.location.pathname !== targetUrl) {
+          window.history.pushState({ channelId: channel.id, slug: channel.slug }, '', targetUrl);
+        }
+        document.title = `${channel.name} смотреть онлайн прямой эфир бесплатно в хорошем качестве HD — Эфир ТВ`;
+      }
       // Сохраняем последний канал
       try {
         localStorage.setItem('wink_last_channel_id', channel.id);
@@ -165,16 +173,32 @@
     autoPlayInitialChannel() {
       if (!window.WinkPlaylist || window.WinkPlaylist.channels.length === 0) return;
 
-      // Пробуем восстановить последний канал
       let targetCh = null;
-      try {
-        const lastId = localStorage.getItem('wink_last_channel_id');
-        if (lastId) {
-          targetCh = window.WinkPlaylist.channels.find(c => c.id === lastId);
-        }
-      } catch (e) {}
 
-      // Если не найден — ищем Первый канал или берем первый из списка
+      // 1. Проверяем, зашел ли пользователь по прямой ссылке канала (/channel/:slug)
+      if (window.INITIAL_CHANNEL_ID || window.INITIAL_CHANNEL_SLUG) {
+        targetCh = window.WinkPlaylist.channels.find(c =>
+          (window.INITIAL_CHANNEL_ID && c.id === window.INITIAL_CHANNEL_ID) ||
+          (window.INITIAL_CHANNEL_SLUG && c.slug === window.INITIAL_CHANNEL_SLUG)
+        );
+      }
+
+      if (!targetCh && window.location.pathname.startsWith('/channel/')) {
+        const pathSlug = decodeURIComponent(window.location.pathname.replace('/channel/', '').replace(/\/$/, ''));
+        targetCh = window.WinkPlaylist.channels.find(c => c.slug === pathSlug || c.id === pathSlug);
+      }
+
+      // 2. Пробуем восстановить последний канал из localStorage
+      if (!targetCh) {
+        try {
+          const lastId = localStorage.getItem('wink_last_channel_id');
+          if (lastId) {
+            targetCh = window.WinkPlaylist.channels.find(c => c.id === lastId);
+          }
+        } catch (e) {}
+      }
+
+      // 3. Если не найден — берем Первый канал или самый первый по списку
       if (!targetCh) {
         targetCh = window.WinkPlaylist.channels.find(c => /первый канал/i.test(c.baseName)) || window.WinkPlaylist.channels[0];
       }
@@ -182,6 +206,16 @@
       if (targetCh && window.WinkPlayer) {
         window.WinkPlayer.playLive(targetCh);
       }
+
+      // 4. Обработчик навигации назад/вперед в браузере (popstate)
+      window.addEventListener('popstate', (e) => {
+        if (e.state && e.state.channelId) {
+          const ch = window.WinkPlaylist.channels.find(c => c.id === e.state.channelId);
+          if (ch && window.WinkPlayer) {
+            window.WinkPlayer.playLive(ch);
+          }
+        }
+      });
     }
 
     startClock() {

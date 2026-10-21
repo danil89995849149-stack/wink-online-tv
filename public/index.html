@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Эфир ТВ — Онлайн телевидение с архивом передач</title>
-  <meta name="description" content="Премиальный сервис онлайн-телевидения с архивом передач до 72 часов. Быстрый выбор каналов, умная перемотка, пропуск рекламы.">
+  <title>Смотреть ТВ онлайн прямой эфир бесплатно в хорошем качестве | Эфир ТВ</title>
+  <meta name="description" content="Смотрите телевидение онлайн в прямом эфире и в архиве передач до 3 суток бесплатно в хорошем качестве HD. Все телеканалы, программа передач, умная перемотка.">
+  <meta name="keywords" content="тв онлайн, смотреть тв онлайн, онлайн тв прямой эфир, тв онлайн бесплатно, тв каналы онлайн, программа передач, архив тв передач, прямой эфир телеканалов">
+  <meta name="robots" content="index, follow">
   <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Open Graph / Соцсети -->
+  <meta property="og:site_name" content="Эфир ТВ">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Смотреть ТВ онлайн прямой эфир бесплатно в хорошем качестве | Эфир ТВ">
+  <meta property="og:description" content="Онлайн-телевидение с архивом передач до 3 суток. Прямой эфир всех телеканалов без регистрации.">
+
+  <!-- Микроразметка Schema.org WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Эфир ТВ — Смотреть телевидение онлайн",
+    "description": "Онлайн ТВ прямой эфир бесплатно в хорошем качестве с архивом телепередач",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><polygon points='38,30 74,50 38,70' fill='%23ffffff'/></svg>">
 
   <!-- Стили дизайн-системы -->
@@ -325,6 +350,9 @@
     <!-- Действия и часы -->
     <div class="header-actions">
       <div class="live-clock" id="liveClock">--:--:--</div>
+      <button class="action-btn text-btn" id="dmcaModalBtn" title="Информация для правообладателей (ст. 1253.1 ГК РФ)" style="font-size: 0.76rem; padding: 5px 9px; background: rgba(255,255,255,0.06); border-radius: 6px; border: 1px solid rgba(255,255,255,0.12); color: #94a3b8; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+        <span>🛡️</span> Правообладателям
+      </button>
       <button class="action-btn icon-only" id="helpModalBtn" title="Горячие клавиши (F, Space, стрелки)">
         <span>⌨️</span>
       </button>
@@ -493,16 +521,46 @@
     </div>
   </div>
 
+  <!-- ==================== МОДАЛЬНОЕ ОКНО: ПРАВООБЛАДАТЕЛЯМ (DMCA) ==================== -->
+  <div id="dmcaModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;">
+    <div style="background: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 26px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); color: #cbd5e1; box-sizing: border-box;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; display: flex; align-items: center; gap: 8px;">🛡️ Информация для правообладателей</h3>
+        <button id="closeDmcaBtn" style="background: transparent; border: none; color: #fff; font-size: 1.3rem; cursor: pointer; padding: 4px;">✕</button>
+      </div>
+      <div style="font-size: 0.88rem; line-height: 1.6; color: #94a3b8;">
+        <p style="margin-bottom: 12px;"><strong style="color: #f1f5f9;">Статус сервиса (ст. 1253.1 ГК РФ):</strong> Сервис «Эфир ТВ» является общедоступным пользовательским веб-интерфейсом (информационным посредником) для воспроизведения потоков прямого телеэфира, находящихся в открытом доступе сети Интернет.</p>
+        <p style="margin-bottom: 12px;">Сервис не осуществляет хранение или запись видеоматериалов на собственных серверах, а также не изменяет исходное содержимое трансляций и рекламные блоки телевещателей.</p>
+        <p style="margin-bottom: 12px;"><strong style="color: #f1f5f9;">Регламент удаления неавторизованного контента (Notice and Takedown):</strong> Если вы являетесь законным правообладателем или уполномоченным представителем телерадиокомпании и считаете, что трансляция потока нарушает ваши исключительные права, направьте официальное обращение:</p>
+        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 12px; margin: 14px 0; text-align: center;">
+          <span style="font-size: 0.95rem; color: #60a5fa; font-weight: 700;">abuse-center@mail.ru</span>
+        </div>
+        <p style="margin-bottom: 0;">В обращении укажите наименование телеканала, документы, подтверждающие полномочия, и ссылку. Ссылка на поток будет оперативно исключена из каталога сервиса в течение 24 часов.</p>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Обработка модального окна подсказок
-    const modal = document.getElementById('hotkeysModal');
-    const openBtn = document.getElementById('helpModalBtn');
-    const closeBtn = document.getElementById('closeHotkeysBtn');
-    if (openBtn && modal) {
-      openBtn.addEventListener('click', () => modal.style.display = 'flex');
-      closeBtn.addEventListener('click', () => modal.style.display = 'none');
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.style.display = 'none';
+    // Обработка модальных окон (подсказки и правообладатели)
+    const hotkeysModal = document.getElementById('hotkeysModal');
+    const openHotkeysBtn = document.getElementById('helpModalBtn');
+    const closeHotkeysBtn = document.getElementById('closeHotkeysBtn');
+    if (openHotkeysBtn && hotkeysModal) {
+      openHotkeysBtn.addEventListener('click', () => hotkeysModal.style.display = 'flex');
+      closeHotkeysBtn.addEventListener('click', () => hotkeysModal.style.display = 'none');
+      hotkeysModal.addEventListener('click', (e) => {
+        if (e.target === hotkeysModal) hotkeysModal.style.display = 'none';
+      });
+    }
+
+    const dmcaModal = document.getElementById('dmcaModal');
+    const openDmcaBtn = document.getElementById('dmcaModalBtn');
+    const closeDmcaBtn = document.getElementById('closeDmcaBtn');
+    if (openDmcaBtn && dmcaModal) {
+      openDmcaBtn.addEventListener('click', () => dmcaModal.style.display = 'flex');
+      closeDmcaBtn.addEventListener('click', () => dmcaModal.style.display = 'none');
+      dmcaModal.addEventListener('click', (e) => {
+        if (e.target === dmcaModal) dmcaModal.style.display = 'none';
       });
     }
   </script>
