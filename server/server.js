@@ -388,6 +388,16 @@ const server = http.createServer(async (req, res) => {
   serveStatic(req, res, pathname);
 });
 
+server.on('clientError', (err, socket) => {
+  if (err.code === 'HPE_INVALID_METHOD' || err.code === 'ECONNRESET' || !socket.writable) {
+    if (socket.writable) {
+      socket.end('HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nConnection: close\r\n\r\n<!DOCTYPE html><html><head><meta charset="utf-8"><title>Перенаправление на HTTP</title><meta http-equiv="refresh" content="0; url=http://127.0.0.1:8900/"></head><body style="background:#07090e;color:#fff;font-family:sans-serif;padding:40px;text-align:center;"><h2>Переход на HTTP версию...</h2><p>Пожалуйста, откройте: <a href="http://127.0.0.1:8900/" style="color:#60a5fa;">http://127.0.0.1:8900/</a></p></body></html>');
+    }
+    return;
+  }
+  socket.destroy(err);
+});
+
 function startServer() {
   playlistManager.init();
   epgManager.init();
@@ -395,7 +405,8 @@ function startServer() {
   server.listen(config.PORT, config.HOST, () => {
     console.log(`=======================================================`);
     console.log(`   ЭФИР ТВ — ОНЛАЙН ТЕЛЕВИДЕНИЕ С АРХИВОМ ПЕРЕДАЧ      `);
-    console.log(`   Сервер запущен: http://localhost:${config.PORT}        `);
+    console.log(`   Сервер запущен: http://127.0.0.1:${config.PORT}       `);
+    console.log(`   (или http://localhost:${config.PORT})                  `);
     console.log(`=======================================================`);
   });
 }
