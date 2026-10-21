@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Эфир ТВ — Онлайн телевидение с архивом передач</title>
+  <meta name="description" content="Премиальный сервис онлайн-телевидения с архивом передач до 72 часов. Быстрый выбор каналов, умная перемотка, пропуск рекламы.">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><polygon points='38,30 74,50 38,70' fill='%23ffffff'/></svg>">
+
+  <!-- Стили дизайн-системы -->
+  <link rel="stylesheet" href="/css/main.css?v=4.1">
+  <link rel="stylesheet" href="/css/player.css?v=4.1">
+  <link rel="stylesheet" href="/css/epg.css?v=4.1">
+
+  <style id="critical-layout-styles">
+    /* КИНЕМАТОГРАФИЧНАЯ 3-КОЛОНОЧНАЯ РАСКЛАДКА НА ВЕСЬ ЭКРАН */
+    html, body {
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      background: #07090e !important;
+      color: #ffffff !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    }
+
+    .app-header {
+      height: 60px !important;
+      min-height: 60px !important;
+      background: rgba(13, 17, 28, 0.95) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 0 20px !important;
+      box-sizing: border-box !important;
+      z-index: 100 !important;
+    }
+
+    .main-layout {
+      display: flex !important;
+      height: calc(100vh - 60px) !important;
+      max-height: calc(100vh - 60px) !important;
+      width: 100vw !important;
+      overflow: hidden !important;
+      background: #07090e !important;
+      box-sizing: border-box !important;
+    }
+
+    /* ЛЕВАЯ КОЛОНКА КАНАЛОВ ДЛЯ БЫСТРОГО СКРОЛЛА КОЛЕСИКОМ */
+    .channels-sidebar {
+      width: 330px !important;
+      min-width: 290px !important;
+      max-width: 360px !important;
+      height: 100% !important;
+      background: #0b0f1a !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+    }
+
+    .channels-header {
+      padding: 12px 16px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: #0f1524 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-shrink: 0 !important;
+    }
+
+    .channels-header-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 1rem !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+    }
+
+    .channels-count-badge {
+      font-size: 0.74rem !important;
+      font-weight: 800 !important;
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border: 1px solid rgba(59, 130, 246, 0.4) !important;
+      padding: 3px 8px !important;
+      border-radius: 12px !important;
+    }
+
+    .channels-scroll-list {
+      flex: 1 1 0 !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      padding: 8px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 4px !important;
+      box-sizing: border-box !important;
+    }
+
+    .channels-scroll-list::-webkit-scrollbar {
+      width: 6px !important;
+    }
+    .channels-scroll-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.18) !important;
+      border-radius: 6px !important;
+    }
+
+    /* СТРОКА КАНАЛА В ЛЕВОЙ КОЛОНКЕ */
+    .channel-row {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 7px 10px !important;
+      border-radius: 8px !important;
+      background: #111726 !important;
+      border: 1px solid rgba(255, 255, 255, 0.07) !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      min-height: 52px !important;
+      box-sizing: border-box !important;
+      flex-shrink: 0 !important;
+    }
+    .channel-row:hover {
+      background: #182238 !important;
+      border-color: rgba(96, 165, 250, 0.3) !important;
+      transform: translateX(2px) !important;
+    }
+    .channel-row.active {
+      background: rgba(59, 130, 246, 0.22) !important;
+      border: 1.5px solid #3b82f6 !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.3) !important;
+    }
+    .channel-row-logo {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 6px !important;
+      background: #080c16 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+      padding: 3px !important;
+      flex-shrink: 0 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .channel-row-logo img {
+      max-width: 100% !important;
+      max-height: 100% !important;
+      object-fit: contain !important;
+    }
+    .channel-row-fallback {
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      color: #60a5fa !important;
+    }
+    .channel-row-info {
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2px !important;
+    }
+    .channel-row-name {
+      font-size: 0.92rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      line-height: 1.25 !important;
+    }
+    .channel-row.active .channel-row-name {
+      color: #93c5fd !important;
+    }
+    .channel-row-prog {
+      font-size: 0.76rem !important;
+      color: #94a3b8 !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      line-height: 1.2 !important;
+    }
+    .channel-row-fav {
+      background: transparent !important;
+      border: none !important;
+      color: #64748b !important;
+      font-size: 1rem !important;
+      cursor: pointer !important;
+      padding: 4px !important;
+      flex-shrink: 0 !important;
+      transition: color 0.15s ease !important;
+    }
+    .channel-row-fav:hover,
+    .channel-row-fav.active {
+      color: #fbbf24 !important;
+    }
+
+    /* ЦЕНТРАЛЬНАЯ ОБЛАСТЬ ПЛЕЕРА */
+    .player-main-area {
+      flex: 1 1 0 !important;
+      height: 100% !important;
+      min-width: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      background: #000000 !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    .player-container {
+      width: 100% !important;
+      height: 100% !important;
+      display: flex !important;
+      position: relative !important;
+      background: #000 !important;
+      overflow: hidden !important;
+    }
+    .video-wrapper {
+      width: 100% !important;
+      height: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: relative !important;
+    }
+    #tvPlayer {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      background: #000 !important;
+    }
+
+    /* ПРАВАЯ КОЛОНКА ТЕЛЕПРОГРАММЫ */
+    .side-epg-panel {
+      width: 380px !important;
+      min-width: 320px !important;
+      max-width: 420px !important;
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      overflow: hidden !important;
+      background: #0b0f1a !important;
+      border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-sizing: border-box !important;
+    }
+    .epg-header {
+      flex-shrink: 0 !important;
+    }
+    .epg-dates-nav {
+      display: flex !important;
+      gap: 6px !important;
+      overflow-x: auto !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    .epg-dates-nav::-webkit-scrollbar {
+      display: none !important;
+    }
+    .epg-programs-list {
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 1 0 !important;
+      min-height: 0 !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      padding: 10px 14px 40px !important;
+      gap: 7px !important;
+      box-sizing: border-box !important;
+    }
+    .epg-item {
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      width: 100% !important;
+      min-height: 60px !important;
+      height: auto !important;
+      box-sizing: border-box !important;
+      background: #131929 !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 8px !important;
+      padding: 9px 12px !important;
+      overflow: visible !important;
+      position: relative !important;
+    }
+    .epg-item-title {
+      font-size: 0.94rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      line-height: 1.35 !important;
+      word-break: break-word !important;
+      overflow: visible !important;
+    }
+    .epg-time-range {
+      font-size: 0.86rem !important;
+      font-weight: 800 !important;
+      color: #60a5fa !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== ШАПКА ПРИЛОЖЕНИЯ ==================== -->
+  <header class="app-header">
+    <div class="brand-section">
+      <a href="/" class="brand-logo" id="brandLogo">
+        <div class="brand-icon">▶</div>
+        <span>ЭФИР <span style="color: #60a5fa;">ТВ</span></span>
+      </a>
+      <span class="brand-badge">АРХИВ 3 ДНЯ</span>
+    </div>
+
+    <!-- Поисковая строка -->
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Поиск телеканалов... (Нажмите /)" autocomplete="off">
+      <button class="search-clear" id="searchClear" title="Очистить поиск">✕</button>
+    </div>
+
+    <!-- Действия и часы -->
+    <div class="header-actions">
+      <div class="live-clock" id="liveClock">--:--:--</div>
+      <button class="action-btn icon-only" id="helpModalBtn" title="Горячие клавиши (F, Space, стрелки)">
+        <span>⌨️</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== ОСНОВНОЙ МАКЕТ: 3 КОЛОНКИ ==================== -->
+  <div class="main-layout">
+
+    <!-- ЛЕВАЯ КОЛОНКА: Все телеканалы для быстрого скролла колесиком -->
+    <aside class="channels-sidebar" id="channelsSidebar">
+      <div class="channels-header">
+        <div class="channels-header-left">
+          <span class="channels-icon">📺</span>
+          <span class="channels-title">Телеканалы</span>
+        </div>
+        <span class="channels-count-badge" id="channelsCountBadge">0</span>
+      </div>
+      <!-- Список каналов (свободный скролл колесиком мыши) -->
+      <div class="channels-scroll-list" id="channelListContainer">
+        <!-- Карточки каналов генерируются скриптом -->
+      </div>
+    </aside>
+
+    <!-- ЦЕНТРАЛЬНАЯ ОБЛАСТЬ: Плеер -->
+    <main class="player-main-area">
+      <div class="player-container">
+        <div class="video-wrapper" id="videoWrapper">
+          <video id="tvPlayer" playsinline preload="auto"></video>
+
+          <!-- Верхний оверлей плеера (часовой пояс скрыт) -->
+          <div class="player-overlay player-top-bar interactive">
+            <div class="player-channel-info">
+              <img class="player-channel-logo" id="playerChannelLogo" src="" alt="" onerror="this.style.opacity='0.2'">
+              <div class="player-titles">
+                <div class="player-channel-name-row">
+                  <span class="player-channel-title" id="playerChannelName">Выберите канал</span>
+                  <span class="stream-status-badge live" id="playerStatusBadge">
+                    <span class="badge-dot"></span>
+                    <span id="playerStatusText">🔴 ПРЯМОЙ ЭФИР</span>
+                  </span>
+                </div>
+                <span class="player-program-title" id="playerProgramTitle">Загрузка эфира...</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Индикатор загрузки / буферизации -->
+          <div class="player-center-state">
+            <div class="loading-spinner" id="playerLoadingSpinner"></div>
+          </div>
+
+          <!-- Нижняя панель управления плеером -->
+          <div class="player-overlay player-bottom-bar interactive">
+            
+            <!-- Таймлайн передачи / скраббер -->
+            <div class="timeline-container">
+              <div class="timeline-track-wrap" id="timelineTrackWrap" title="Кликните для перемотки">
+                <div class="timeline-track">
+                  <div class="timeline-buffer" id="timelineBuffer"></div>
+                  <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+                <div class="timeline-thumb" id="timelineThumb"></div>
+              </div>
+              <div class="timeline-times">
+                <span id="timeCurrent">00:00</span>
+                <span id="timeTotal">00:00</span>
+              </div>
+            </div>
+
+            <!-- Ряд кнопок управления -->
+            <div class="controls-row">
+              
+              <!-- Левая группа: Play/Pause, Звук, Перемотка -->
+              <div class="controls-left">
+                <button class="ctrl-btn btn-play" id="ctrlPlayBtn" title="Воспроизведение / Пауза (Space)">
+                  <span id="ctrlPlayIcon">▶</span>
+                </button>
+
+                <div class="volume-wrap">
+                  <button class="ctrl-btn" id="ctrlMuteBtn" title="Звук (M)">🔊</button>
+                  <input type="range" class="volume-slider" id="ctrlVolumeSlider" min="0" max="1" step="0.05" value="1" title="Громкость">
+                </div>
+
+                <!-- Перемотка назад -->
+                <button class="ctrl-btn" id="ctrlRev30" title="Назад 30 сек">↺ 30</button>
+                <button class="ctrl-btn" id="ctrlRev10" title="Назад 10 сек (←)">↺ 10</button>
+                
+                <!-- Перемотка вперед -->
+                <button class="ctrl-btn" id="ctrlFwd10" title="Вперед 10 сек (→)">10 ↻</button>
+                <button class="ctrl-btn" id="ctrlFwd30" title="Вперед 30 сек">30 ↻</button>
+              </div>
+
+              <!-- Центральная группа: Пропуск рекламы и возврат к Live -->
+              <div class="controls-center">
+                <button class="skip-ad-btn" id="ctrlSkipAdBtn" style="display: none;" title="Пропустить рекламный блок">
+                  <span>⏩</span> <span>Пропустить рекламу (+90с)</span>
+                </button>
+
+                <button class="jump-live-btn" id="ctrlJumpLiveBtn" style="display: none;" title="Вернуться к прямому эфиру">
+                  <span>🔴</span> <span>В прямой эфир</span>
+                </button>
+              </div>
+
+              <!-- Правая группа: Скорость, PiP, Fullscreen -->
+              <div class="controls-right">
+                <select class="ctrl-select" id="ctrlSpeedSelect" title="Скорость воспроизведения">
+                  <option value="0.75">0.75x</option>
+                  <option value="1" selected>1.0x</option>
+                  <option value="1.25">1.25x</option>
+                  <option value="1.5">1.5x</option>
+                  <option value="2">2.0x</option>
+                </select>
+
+                <button class="ctrl-btn" id="ctrlPipBtn" title="Картинка в картинке (P)">⧉</button>
+                <button class="ctrl-btn" id="ctrlFullscreenBtn" title="Полноэкранный режим (F)">⛶</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ПРАВАЯ КОЛОНКА: Телепрограмма текущего канала и архив передач -->
+    <aside class="side-epg-panel" id="sideEpgPanel">
+      <div class="epg-header">
+        <div class="epg-header-top">
+          <span class="epg-header-title">
+            <span>📋</span> <span id="epgChannelTitle">Телепрограмма</span>
+          </span>
+          <span class="epg-header-meta">Архив 3 дня</span>
+        </div>
+        <!-- Навигатор по дням -->
+        <div class="epg-dates-nav" id="epgDatesNav"></div>
+      </div>
+      <!-- Список передач -->
+      <div class="epg-programs-list" id="epgProgramsList">
+        <div class="epg-empty-state">
+          <div class="epg-empty-icon">📺</div>
+          <span>Выберите канал для просмотра телепрограммы и архива</span>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Модальное окно горячих клавиш -->
+  <div id="hotkeysModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center;">
+    <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; max-width: 480px; width: 90%; box-shadow: var(--shadow-lg);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 1.15rem; font-weight: 700;">Горячие клавиши управления</h3>
+        <button id="closeHotkeysBtn" style="background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;">✕</button>
+      </div>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; line-height: 2;">
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">Space</kbd></td><td>Воспроизведение / Пауза</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">← / →</kbd></td><td>Перемотка на 10 сек</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">Shift + ← / →</kbd></td><td>Перемотка на 30 сек</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">↑ / ↓</kbd></td><td>Регулировка громкости</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">F</kbd></td><td>Полноэкранный режим</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">M</kbd></td><td>Включить / Выключить звук</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">P</kbd></td><td>Картинка в картинке (PiP)</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">/</kbd></td><td>Быстрый переход к поиску каналов</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Обработка модального окна подсказок
+    const modal = document.getElementById('hotkeysModal');
+    const openBtn = document.getElementById('helpModalBtn');
+    const closeBtn = document.getElementById('closeHotkeysBtn');
+    if (openBtn && modal) {
+      openBtn.addEventListener('click', () => modal.style.display = 'flex');
+      closeBtn.addEventListener('click', () => modal.style.display = 'none');
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    }
+  </script>
+
+  <!-- Скрипты библиотек и ядра -->
+  <script src="/vendor/hls.min.js"></script>
+  <script src="/vendor/external_logos.js"></script>
+  <script src="/js/timezone.js?v=4.1"></script>
+  <script src="/js/player.js?v=4.1"></script>
+  <script src="/js/epg.js?v=4.1"></script>
+  <script src="/js/playlist.js?v=4.1"></script>
+  <script src="/js/promo.js?v=4.1"></script>
+  <script src="/js/app.js?v=4.1"></script>
+
+</body>
+</html>

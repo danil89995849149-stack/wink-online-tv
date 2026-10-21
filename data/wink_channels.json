@@ -1,0 +1,4408 @@
+{
+  "updatedAt": 1792512886971,
+  "source": "Wink (Ростелеком)",
+  "totalChannels": 203,
+  "channels": [
+    {
+      "id": "ch_0",
+      "baseName": "Красная Линия",
+      "group": "С сайтов (VPN)",
+      "logo": "",
+      "tvgId": "Красная Линия",
+      "hasArchive": false,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Красная Линия",
+          "tzShift": 0,
+          "url": "https://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u8",
+          "catchup": "",
+          "catchupSource": "",
+          "userAgent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+        }
+      ]
+    },
+    {
+      "id": "ch_1",
+      "baseName": "TV ГУБЕРНИЯ",
+      "group": "С сайтов (VPN)",
+      "logo": "",
+      "tvgId": "TV ГУБЕРНИЯ",
+      "hasArchive": false,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "TV ГУБЕРНИЯ",
+          "tzShift": 0,
+          "url": "https://s68149.cdn.ngenix.net/s68149-media-origin/lvs/tvgub/tracks-v1a1/mono.m3u8",
+          "catchup": "",
+          "catchupSource": "",
+          "userAgent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+        }
+      ]
+    },
+    {
+      "id": "ch_2",
+      "baseName": "Камин ТВ",
+      "group": "Wink",
+      "logo": "https://i.postimg.cc/SNzCzTBf/5c203420845831-562f213b2e6f7.png",
+      "tvgId": "Камин ТВ",
+      "hasArchive": false,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Камин ТВ",
+          "tzShift": 0,
+          "url": "https://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R05_KAMINTV/variant.m3u8",
+          "catchup": "",
+          "catchupSource": "",
+          "userAgent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+        }
+      ]
+    },
+    {
+      "id": "ch_3",
+      "baseName": "Первый канал",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Первый канал",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Первый канал",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+        },
+        {
+          "fullName": "Первый канал (+1)",
+          "tzShift": 1,
+          "url": "https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_SARATOV_1TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+2)",
+          "tzShift": 2,
+          "url": "https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R03_OTT_1TV_EKT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+3)",
+          "tzShift": 3,
+          "url": "https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_OMSK_1TV_OMSKOBL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+5)",
+          "tzShift": 5,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_5/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+6)",
+          "tzShift": 6,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_6/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+7)",
+          "tzShift": 7,
+          "url": "https://s97982.cdn.ngenix.net/hls/CH_R27_1TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+8)",
+          "tzShift": 8,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_8/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Первый канал (+9)",
+          "tzShift": 9,
+          "url": "https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_1TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_4",
+      "baseName": "НТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "НТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НТВ",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "НТВ (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "НТВ (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "НТВ (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_5",
+      "baseName": "РЕН ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "РЕН ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "РЕН ТВ",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "РЕН ТВ (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_6",
+      "baseName": "Рен ТВ +4",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Рен ТВ +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Рен ТВ +4",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_7",
+      "baseName": "Рен ТВ +7",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Рен ТВ +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Рен ТВ +7",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_8",
+      "baseName": "Репортер 73",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Репортер 73",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Репортер 73",
+          "tzShift": 0,
+          "url": "http://rt-vlg-ul-htlive.cdn.ngenix.net/hls/CH_R03_REP73/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_9",
+      "baseName": "Рифей-ТВ",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1531138277952.png",
+      "tvgId": "Рифей-ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Рифей-ТВ",
+          "tzShift": 0,
+          "url": "https://rt-ural-perm-htlive.cdn.ngenix.net/hls/CH_R02_OTT_RENTV_REFEY_PERM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_10",
+      "baseName": "Россия 1",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Россия 1",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Россия 1",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+1)",
+          "tzShift": 1,
+          "url": "https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R04_OTT_VLG_SARATOV_ROSSIA1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+2)",
+          "tzShift": 2,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+3)",
+          "tzShift": 3,
+          "url": "https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_OMSK_ROSSIA1_OMSKOBL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+4)",
+          "tzShift": 4,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+5)",
+          "tzShift": 5,
+          "url": "https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_IRK_ROSSIA1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+6)",
+          "tzShift": 6,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+7)",
+          "tzShift": 7,
+          "url": "https://s97982.cdn.ngenix.net/hls/CH_R27_1TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+8)",
+          "tzShift": 8,
+          "url": "https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_ROSSIA1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия 1 (+9)",
+          "tzShift": 9,
+          "url": "https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_ROSSIA1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_11",
+      "baseName": "Россия 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Россия 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Россия 24",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_12",
+      "baseName": "Россия К",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Россия К",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Россия К",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия К (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия К (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Россия К (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_13",
+      "baseName": "ТНТ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТНТ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТНТ",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТНТ (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТНТ (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТНТ (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_14",
+      "baseName": "ТНТ4",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТНТ4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТНТ4",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТНТ4 (+2)",
+          "tzShift": 2,
+          "url": "https://s25617.cdn.ngenix.net/mdrm/CH_TNT4_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТНТ4 (+4)",
+          "tzShift": 4,
+          "url": "https://s25617.cdn.ngenix.net/mdrm/CH_TNT4_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТНТ4 (+7)",
+          "tzShift": 7,
+          "url": "https://s25617.cdn.ngenix.net/mdrm/CH_TNT4_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_15",
+      "baseName": "2x2",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "2x2",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "2x2",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "2x2 (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "2x2 (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "2x2 (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_16",
+      "baseName": "СОЛНЦЕ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "СОЛНЦЕ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "СОЛНЦЕ",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "СОЛНЦЕ (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "СОЛНЦЕ (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "СОЛНЦЕ (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_17",
+      "baseName": "Пятница",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Пятница",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятница",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_18",
+      "baseName": "Пятница!",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "piatnica-pl2",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятница! (+2)",
+          "tzShift": 2,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Пятница! (+4)",
+          "tzShift": 4,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Пятница! (+5)",
+          "tzShift": 5,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Пятница! (+7)",
+          "tzShift": 7,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_19",
+      "baseName": "Пятый канал",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "5kanal-ru-pl4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятый канал",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Пятый канал (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Пятый канал (+4)",
+          "tzShift": 4,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Пятый канал (+7)",
+          "tzShift": 7,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_20",
+      "baseName": "СТС",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "СТС",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "СТС",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_STS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "СТС (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "СТС (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "СТС (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_21",
+      "baseName": "СТС Love",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "СТС Love",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "СТС Love",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_22",
+      "baseName": "Супер",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Супер",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Супер",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Супер (+2)",
+          "tzShift": 2,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Супер (+4)",
+          "tzShift": 4,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Супер (+7)",
+          "tzShift": 7,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_23",
+      "baseName": "Сургут 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Сургут 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Сургут 24",
+          "tzShift": 0,
+          "url": "http://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SURGUT24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_24",
+      "baseName": "ТВ Центр",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "2038",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ Центр",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТВ Центр (+2)",
+          "tzShift": 2,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_25",
+      "baseName": "ТВЦ +4",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТВЦ +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВЦ +4",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_26",
+      "baseName": "ТВЦ +7",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТВЦ +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВЦ +7",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_27",
+      "baseName": "ТВ3",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТВ3",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ3",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТВ3 (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТВ3 (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "ТВ3 (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_28",
+      "baseName": "Че",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Че",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Че",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_29",
+      "baseName": "Че!",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Че!",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Че! (+2)",
+          "tzShift": 2,
+          "url": "https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R02_OTT_PERETZ/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Че! (+4)",
+          "tzShift": 4,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_CHE_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Че! (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_30",
+      "baseName": "Ю",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Ю",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ю",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_U/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Ю (+2)",
+          "tzShift": 2,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_U_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Ю (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_U_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Ю (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_U_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_31",
+      "baseName": "Домашний",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Домашний",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_32",
+      "baseName": "Домашний +2",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Домашний +2",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний +2",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_33",
+      "baseName": "Домашний +4",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Домашний +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний +4",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_34",
+      "baseName": "Домашний +7",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Домашний +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний +7",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_35",
+      "baseName": "Звезда",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Звезда",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Звезда",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Звезда (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Звезда (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Звезда (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_36",
+      "baseName": "Карусель",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "karusel-pl2",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Карусель",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Карусель (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Карусель (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Карусель (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_37",
+      "baseName": "Мир",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Мир",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Мир",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_38",
+      "baseName": "МИР",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "МИР",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "МИР (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "МИР (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "МИР (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_39",
+      "baseName": "Москва. Доверие",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "doverie",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Москва. Доверие",
+          "tzShift": 0,
+          "url": "https://rt-mos-htlive.cdn.ngenix.net/hls/CH_R04_DOVERIE/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_40",
+      "baseName": "Муз ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Муз ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Муз ТВ",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_41",
+      "baseName": "МУЗ ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "МУЗ ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "МУЗ ТВ (+2)",
+          "tzShift": 2,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "МУЗ ТВ (+4)",
+          "tzShift": 4,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "МУЗ ТВ (+7)",
+          "tzShift": 7,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_42",
+      "baseName": "31 канал (Челябинск)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "31 канал (Челябинск)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "31 канал (Челябинск)",
+          "tzShift": 0,
+          "url": "https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R01_OTT_31TVK_CHEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_43",
+      "baseName": "41 Регион",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "no_epg_news",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "41 Регион",
+          "tzShift": 0,
+          "url": "https://s14131.cdn.ngenix.net/hls/CH_R02_OTT_DV_KAM_41REG_OTT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_44",
+      "baseName": "12 канал HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "12-omsk",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "12 канал HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_OMSK_12CHANNEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_45",
+      "baseName": "Норд ТВ (Новодвинск)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Норд ТВ (Новодвинск)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Норд ТВ (Новодвинск)",
+          "tzShift": 0,
+          "url": "https://rt-nw-arkh-htlive.cdn.ngenix.net/hls/CH_R01_NORDTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_46",
+      "baseName": "Пятый канал +4",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Пятый канал +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятый канал +4",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_47",
+      "baseName": "Пятый канал +7",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Пятый канал +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятый канал +7",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_48",
+      "baseName": "6 ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "6 ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "6 ТВ",
+          "tzShift": 0,
+          "url": "https://s97982.cdn.ngenix.net/hls/CH_R27_OTT_DV_HVSK_6TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_49",
+      "baseName": "12 канал Череповец",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "kanal-12-cherepovec",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "12 канал Череповец",
+          "tzShift": 0,
+          "url": "https://rt-nw-vol-htlive.cdn.ngenix.net/hls/CH_R01_12CHANNEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_50",
+      "baseName": "7 канал Красноярск",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "7 канал Красноярск",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "7 канал Красноярск",
+          "tzShift": 0,
+          "url": "https://rt-sib-krsk-htlive.cdn.ngenix.net/hls/CH_R13_OTT_SIB_KRSK_RENTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_51",
+      "baseName": "8 канал",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "8 канал",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "8 канал",
+          "tzShift": 0,
+          "url": "http://s91030.cdn.ngenix.net/hls/CH_R01_OTT_DV_VLD_OTT8KANAL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_52",
+      "baseName": "8 канал (Владивосток)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "8vladik",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "8 канал (Владивосток)",
+          "tzShift": 0,
+          "url": "https://s91030.cdn.ngenix.net/hls/CH_R01_OTT_DV_VLD_OTT8KANAL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_53",
+      "baseName": "8 канал (Красноярский край)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "8kanal-krasnoyarsk",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "8 канал (Красноярский край)",
+          "tzShift": 0,
+          "url": "https://rt-sib-krsk-htlive.cdn.ngenix.net/hls/CH_R02_OTT_SIB_KRSK_8CHANNEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_54",
+      "baseName": "8 канал (Новосибирск)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "8kanal-novosibirsk",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "8 канал (Новосибирск)",
+          "tzShift": 0,
+          "url": "https://rt-sib-nsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_NSK_8CHANNEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_55",
+      "baseName": "TMTV",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "TMTV",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "TMTV",
+          "tzShift": 0,
+          "url": "http://rt-vlg-kzn-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_KZN_TMTV/variant.m3u8?version2",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_56",
+      "baseName": "UGRA TRAVEL",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "UGRA TRAVEL",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "UGRA TRAVEL",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R04_OTT_UGRA_TRAVEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_57",
+      "baseName": "АИСТ HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "aist",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "АИСТ HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_IRK_AIST/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_58",
+      "baseName": "Амурское областное телевидение",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "1obl-blagoveschensk",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Амурское областное телевидение",
+          "tzShift": 0,
+          "url": "https://s84942.cdn.ngenix.net/hls/CH_R28_OTT_DV_BLAG_AOT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_59",
+      "baseName": "Ариг Ус 24 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Ариг Ус 24 HD",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ариг Ус 24 HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R01_ARIGUS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_60",
+      "baseName": "Арктика 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Арктика 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Арктика 24",
+          "tzShift": 0,
+          "url": "http://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_ARKTIKA24_URAL_YNF/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_61",
+      "baseName": "78 канал",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "78kanal",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "78 канал",
+          "tzShift": 0,
+          "url": "https://rt-nw-spb-htlive.cdn.ngenix.net/hls/CH_R02_KANAL78/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_62",
+      "baseName": "РБК",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "rbk",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "РБК",
+          "tzShift": 0,
+          "url": "https://s91030.cdn.ngenix.net/hls/CH_R25_RBKTVHD_VLDK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_63",
+      "baseName": "Первый Севастопольский",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "pervy-sevastopolsky",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Первый Севастопольский",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_PERVIJSEVASTOPOL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_64",
+      "baseName": "НТС",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "nts-sevastopol",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НТС",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_NTSHD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_65",
+      "baseName": "СТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "stv-sevastopol",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "СТВ",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_STVHD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_66",
+      "baseName": "ТРК-555",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "trk-555",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТРК-555",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TRK555HD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_67",
+      "baseName": "Крым 1",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "pervy-krymsky",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Крым 1",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_KRYM1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_68",
+      "baseName": "Крым 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "krym24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Крым 24",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_KRYM24HD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_69",
+      "baseName": "Арктик-ТВ HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "arktik-tv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Арктик-ТВ HD",
+          "tzShift": 0,
+          "url": "https://rt-nw-murm-htlive.cdn.ngenix.net/hls/CH_R03_ARCTIC/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_70",
+      "baseName": "Архыз-24 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "arxyz24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Архыз-24 HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-cherks-htlive.cdn.ngenix.net/hls/CH_R03_OTT_STH_CHERKS_ARKHIZ241/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_71",
+      "baseName": "Астрахань 24 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Астрахань 24 HD",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Астрахань 24 HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-astrh-htlive.cdn.ngenix.net/hls/CH_R01_ASTRAKHAN24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_72",
+      "baseName": "АТВ-Медиа",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "АТВ-Медиа",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "АТВ-Медиа",
+          "tzShift": 0,
+          "url": "https://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R01_ATVMEDIA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_73",
+      "baseName": "АТВ-Ставрополь",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "АТВ-Ставрополь",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "АТВ-Ставрополь",
+          "tzShift": 0,
+          "url": "https://rt-sth-stavr-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_STAVR_ATV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_74",
+      "baseName": "СТВ 24 (Северодвинск)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "stv24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "СТВ 24 (Северодвинск)",
+          "tzShift": 0,
+          "url": "https://rt-nw-arkh-htlive.cdn.ngenix.net/hls/CH_R01_STV24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_75",
+      "baseName": "Барс плюс",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "bars",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Барс плюс",
+          "tzShift": 0,
+          "url": "https://rt-ct-ivan-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_IVAN_BARS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_76",
+      "baseName": "Башкортостан 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Башкортостан 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Башкортостан 24",
+          "tzShift": 0,
+          "url": "https://s45177.cdn.ngenix.net/hls/CH_R02_BASHKORTOSTAN24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_77",
+      "baseName": "Белгород 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Белгород 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Белгород 24",
+          "tzShift": 0,
+          "url": "https://rt-ct-belg-htlive.cdn.ngenix.net/hls/CH_R02_OTT_CT_BELG_BELGOROD24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_78",
+      "baseName": "Брянская Губерния HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "brianskaya-gubernia",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Брянская Губерния HD",
+          "tzShift": 0,
+          "url": "https://rt-ct-bryansk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_BRYANSK_BRGRUBER/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_79",
+      "baseName": "БСТ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "БСТ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "БСТ",
+          "tzShift": 0,
+          "url": "https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R01_OTT_BST/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_80",
+      "baseName": "Вариант V",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tk-variant",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Вариант V",
+          "tzShift": 0,
+          "url": "https://rt-ct-vlad-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_VLAD_VARIANT_V/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_81",
+      "baseName": "Вектор 24",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1529493228465.jpg",
+      "tvgId": "Вектор 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Вектор 24",
+          "tzShift": 0,
+          "url": "https://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R02_VEKTOR24_GUBK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_82",
+      "baseName": "Ветта 24 Пермь",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "vetta24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ветта 24 Пермь",
+          "tzShift": 0,
+          "url": "https://rt-ural-perm-htlive.cdn.ngenix.net/hls/CH_R01_OTT_VETTA24_PERM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_83",
+      "baseName": "Ветта-24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "vetta24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ветта-24",
+          "tzShift": 0,
+          "url": "http://rt-ural-perm-htlive.cdn.ngenix.net/hls/CH_R01_OTT_VETTA24_PERM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_84",
+      "baseName": "Волга",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "volga",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Волга",
+          "tzShift": 0,
+          "url": "https://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R03_VOLGA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_85",
+      "baseName": "Волгоград 1",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Волгоград 1",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Волгоград 1",
+          "tzShift": 0,
+          "url": "http://rt-sth-vgrad-htlive.cdn.ngenix.net/hls/CH_R06_OTT_STH_VGRAD_VOLGOGRAD1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_86",
+      "baseName": "Волгоград 1 HD",
+      "group": "Wink",
+      "logo": "http://fe-sth.svc.iptv.rt.ru/images/broadcastChannel1472218027991.png",
+      "tvgId": "Волгоград 1 HD",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Волгоград 1 HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-vgrad-htlive.cdn.ngenix.net/hls/CH_R06_OTT_STH_VGRAD_VOLGOGRAD1/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_87",
+      "baseName": "Волгоград-24 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "volgograd-24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Волгоград-24 HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-vgrad-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_VGRAD_VOLGOGRAD24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_88",
+      "baseName": "Восток 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Восток 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Восток 24",
+          "tzShift": 0,
+          "url": "http://s91030.cdn.ngenix.net/hls/CH_R01_OTT_DV_VLD_VOSTOK24_OTT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_89",
+      "baseName": "ВОТтв HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "vot-tv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ВОТтв HD",
+          "tzShift": 0,
+          "url": "https://rt-ct-lipetsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_LIPETSK_VOTTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_90",
+      "baseName": "Время Н",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "vremia-n",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Время Н",
+          "tzShift": 0,
+          "url": "https://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R04_VREMYAN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_91",
+      "baseName": "Всё ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "vsio-tv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Всё ТВ",
+          "tzShift": 0,
+          "url": "https://s72169.cdn.ngenix.net/hls/CH_VSETVHD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_92",
+      "baseName": "ВТК 41 \"Аргус\"",
+      "group": "Wink",
+      "logo": "https://i.postimg.cc/QtQrZy4k/23.jpg",
+      "tvgId": "ВТК 41 \"Аргус\"",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ВТК 41 \"Аргус\"",
+          "tzShift": 0,
+          "url": "https://rt-ct-vrzh-htlive.cdn.ngenix.net/hls/CH_R01_ARGUS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_93",
+      "baseName": "Городской телеканал Ярославль",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "gorodskoy-yaroslavl",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Городской телеканал Ярославль",
+          "tzShift": 0,
+          "url": "https://rt-ct-yarl-htlive.cdn.ngenix.net/hls/CH_R02_OTT_CT_YARL_GTREG/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_94",
+      "baseName": "Губерния 33 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "gubernia-33",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Губерния 33 HD",
+          "tzShift": 0,
+          "url": "http://rt-ct-vlad-htlive.cdn.ngenix.net/hls/CH_R02_OTT_CT_VLAD_GUBERNIA33/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_95",
+      "baseName": "Губерния Самара",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Губерния Самара",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Губерния Самара",
+          "tzShift": 0,
+          "url": "https://rt-vlg-samara-htlive.cdn.ngenix.net/hls/CH_R02_GUBERNIA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_96",
+      "baseName": "Девятка ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Девятка ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Девятка ТВ",
+          "tzShift": 0,
+          "url": "https://rt-vlg-kirov-htlive.cdn.ngenix.net/hls/CH_R02_9TV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_97",
+      "baseName": "Дзержинск ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Дзержинск ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Дзержинск ТВ",
+          "tzShift": 0,
+          "url": "https://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R01_DZERZHINSK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_98",
+      "baseName": "ДОН 24 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "don-24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ДОН 24 HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-rd-htlive.cdn.ngenix.net/hls/CH_R02_OTT_STH_RD_DON24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_99",
+      "baseName": "Евразия",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Евразия",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Евразия",
+          "tzShift": 0,
+          "url": "https://rt-vlg-orb-htlive.cdn.ngenix.net/hls/CH_R02_EVRAZIY/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_100",
+      "baseName": "Енисей HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "enisey-region",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Енисей HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-krsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_KRSK_ENISEY/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_101",
+      "baseName": "Ивановское общественное телевидение",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Ивановское общественное телевидение",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ивановское общественное телевидение",
+          "tzShift": 0,
+          "url": "https://rt-ct-ivan-htlive.cdn.ngenix.net/hls/CH_R02_OTT_CT_IVAN_IOT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_102",
+      "baseName": "Импульс Севера",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1558583498243.png",
+      "tvgId": "Импульс Севера",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Импульс Севера",
+          "tzShift": 0,
+          "url": "https://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R02_IMPULS_NBK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_103",
+      "baseName": "Инфо 24 (Шадринск)",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1550219150031.png",
+      "tvgId": "Инфо 24 (Шадринск)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Инфо 24 (Шадринск)",
+          "tzShift": 0,
+          "url": "https://rt-ural-krg-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SHINFO_URAL_KRG/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_104",
+      "baseName": "Информационная служба Югры",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1562587410193.png",
+      "tvgId": "Информационная служба Югры",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Информационная служба Югры",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R01_OTT_PERVIYSOVETSKIY/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_105",
+      "baseName": "Кавказ 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Кавказ 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Кавказ 24",
+          "tzShift": 0,
+          "url": "https://rt-sth-stavr-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_STAVR_KAVKAZ24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_106",
+      "baseName": "Камчатка HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "no_epg_news",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Камчатка HD",
+          "tzShift": 0,
+          "url": "https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_KAMCHATKA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_107",
+      "baseName": "Каскад",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "kaskad24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Каскад",
+          "tzShift": 0,
+          "url": "http://rt-nw-klgr-htlive.cdn.ngenix.net/hls/CH_R01_KASKAD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_108",
+      "baseName": "Катунь 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "katun-24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Катунь 24",
+          "tzShift": 0,
+          "url": "https://rt-sib-bul-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_BUL_KATUN24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_109",
+      "baseName": "Краснодар HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "krasnodar",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Краснодар HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-krdar-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_KRDAR_KRASNODAR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_110",
+      "baseName": "КТВ-Город",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ktv-gorod",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "КТВ-Город",
+          "tzShift": 0,
+          "url": "http://rt-ct-vrzh-htlive.cdn.ngenix.net/hls/CH_R02_OTT_CT_VRZH_CTVGOROD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_111",
+      "baseName": "Кубань 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Кубань 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Кубань 24",
+          "tzShift": 0,
+          "url": "https://rt-sth-krdar-htlive.cdn.ngenix.net/hls/CH_R04_KUBAN24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_112",
+      "baseName": "Кузбасс 1",
+      "group": "Wink",
+      "logo": "http://fe-sib.svc.iptv.rt.ru/images/broadcastChannel1578629022322.png",
+      "tvgId": "Кузбасс 1",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Кузбасс 1",
+          "tzShift": 0,
+          "url": "https://rt-sib-kem-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_KEM_GTRK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_113",
+      "baseName": "Лен ТВ 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "lot-47",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Лен ТВ 24",
+          "tzShift": 0,
+          "url": "https://rt-nw-spb-htlive.cdn.ngenix.net/hls/CH_R02_LENTVSD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_114",
+      "baseName": "Липецкое время",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Липецкое время",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Липецкое время",
+          "tzShift": 0,
+          "url": "http://rt-ct-lipetsk-htlive.cdn.ngenix.net/hls/CH_R02_OTT_CT_LIPETSK_LVREM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_115",
+      "baseName": "Майдан",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Майдан",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Майдан",
+          "tzShift": 0,
+          "url": "http://rt-vlg-kzn-htlive.cdn.ngenix.net/hls/CH_R05_OTT_VLG_KZN_MAIDAN/variant.m3u8?version2",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_116",
+      "baseName": "Майкопское Телевидение",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "kuban-24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Майкопское Телевидение",
+          "tzShift": 0,
+          "url": "https://rt-sth-krdar-htlive.cdn.ngenix.net/hls/CH_R04_OTT_STH_KRDAR_MAYKOP/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_117",
+      "baseName": "Матур ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Матур ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Матур ТВ",
+          "tzShift": 0,
+          "url": "https://s45177.cdn.ngenix.net/hls/CH_R02_MATURTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_118",
+      "baseName": "МИГ ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "mig-tv-noyabrsk",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "МИГ ТВ",
+          "tzShift": 0,
+          "url": "http://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_MIG_TV_URAL_YNF/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_119",
+      "baseName": "Мир Белогорья",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Мир Белогорья",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Мир Белогорья",
+          "tzShift": 0,
+          "url": "https://rt-ct-belg-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_BELG_MIR_BLG/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_120",
+      "baseName": "Мордовия 24",
+      "group": "Wink",
+      "logo": "http://fe-vlg.svc.iptv.rt.ru/images/broadcastChannel1553783249761.png",
+      "tvgId": "Мордовия 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Мордовия 24",
+          "tzShift": 0,
+          "url": "https://rt-vlg-srnk-htlive.cdn.ngenix.net/hls/CH_R02_MORDOVIY24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_121",
+      "baseName": "Муравленко 24",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1569901043455.jpg",
+      "tvgId": "Муравленко 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Муравленко 24",
+          "tzShift": 0,
+          "url": "https://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_MURAVLENKO_24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_122",
+      "baseName": "МЭТР",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "МЭТР",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "МЭТР",
+          "tzShift": 0,
+          "url": "https://rt-vlg-yola-htlive.cdn.ngenix.net/hls/CH_R03_METR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_123",
+      "baseName": "Народное телевидение Мордовии",
+      "group": "Wink",
+      "logo": "http://fe-vlg.svc.iptv.rt.ru/images/broadcastChannel1490273937894.png",
+      "tvgId": "Народное телевидение Мордовии",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Народное телевидение Мордовии",
+          "tzShift": 0,
+          "url": "https://rt-vlg-srnk-htlive.cdn.ngenix.net/hls/CH_R01_NTM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_124",
+      "baseName": "Национальное ТВ Чувашии",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "chavash-en",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Национальное ТВ Чувашии",
+          "tzShift": 0,
+          "url": "https://rt-vlg-chr-htlive.cdn.ngenix.net/hls/CH_R01_NATIONALTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_125",
+      "baseName": "Наш дом",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Наш дом",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Наш дом",
+          "tzShift": 0,
+          "url": "https://rt-vlg-penza-htlive.cdn.ngenix.net/hls/CH_R03_NASHDOM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_126",
+      "baseName": "Север (Нарьян-Мар)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "sever",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Север (Нарьян-Мар)",
+          "tzShift": 0,
+          "url": "https://rt-nw-arkh-htlive.cdn.ngenix.net/hls/CH_R01_SEVER/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_127",
+      "baseName": "Котлас ТВ (Арх. область)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "kotlastv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Котлас ТВ (Арх. область)",
+          "tzShift": 0,
+          "url": "https://rt-nw-arkh-htlive.cdn.ngenix.net/hls/CH_R01_KOTLASTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_128",
+      "baseName": "Санкт-Петербург",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "sankt-peterburg",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Санкт-Петербург",
+          "tzShift": 0,
+          "url": "https://rt-nw-spb-htlive.cdn.ngenix.net/hls/CH_R02_SPBREGIONALHD/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_129",
+      "baseName": "Москва 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "moskva-24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Москва 24",
+          "tzShift": 0,
+          "url": "https://rt-mos-htlive.cdn.ngenix.net/hls/CH_R04_MOSKOV24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_130",
+      "baseName": "Наши города",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Наши города",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Наши города",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R04_OTT_NGOR_URAL_SUR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_131",
+      "baseName": "НВК (Саха)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "saxa",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НВК (Саха)",
+          "tzShift": 0,
+          "url": "https://s34351.cdn.ngenix.net/hls/CH_R03_OTT_DV_YKT_NVC_OTT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_132",
+      "baseName": "Ника-ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "nika-tv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ника-ТВ",
+          "tzShift": 0,
+          "url": "https://rt-ct-kaluga-htlive.cdn.ngenix.net/hls/CH_R01_NIKA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_133",
+      "baseName": "ННТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ННТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ННТВ",
+          "tzShift": 0,
+          "url": "http://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R02_NNTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_134",
+      "baseName": "Новгородское областное телевидение",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Новгородское областное телевидение",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Новгородское областное телевидение",
+          "tzShift": 0,
+          "url": "https://rt-nw-novg-htlive.cdn.ngenix.net/hls/CH_R02_NOVGORODTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_135",
+      "baseName": "Новое время (Радужный)",
+      "group": "Wink",
+      "logo": "http://immo.date/logo/radujniy.png",
+      "tvgId": "Новое время (Радужный)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Новое время (Радужный)",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R04_OTT_RADUZNYI/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_136",
+      "baseName": "Новый век (Тамбов)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Новый век (Тамбов)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Новый век (Тамбов)",
+          "tzShift": 0,
+          "url": "http://rt-ct-tamb-htlive.cdn.ngenix.net/hls/CH_R03_OTT_CT_TAMB_NOVIY_VEK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_137",
+      "baseName": "НСК 49",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "49kanal",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НСК 49",
+          "tzShift": 0,
+          "url": "https://rt-sib-nsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_NSK_49CHANNEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_138",
+      "baseName": "НТК",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "НТК",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НТК",
+          "tzShift": 0,
+          "url": "https://s97982.cdn.ngenix.net/hls/CH_R79_OTT_DV_HVSK_NTK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_139",
+      "baseName": "НТС Иркутск",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "НТС Иркутск",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НТС Иркутск",
+          "tzShift": 0,
+          "url": "https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_IRK_RENTVIRK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_140",
+      "baseName": "НТС-Ирбит (Екатеринбург)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "nts-irbit",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "НТС-Ирбит (Екатеринбург)",
+          "tzShift": 0,
+          "url": "https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R04_IRBITVEST_EKT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_141",
+      "baseName": "Область 45 HD",
+      "group": "Wink",
+      "logo": "http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1574910981778.jpg",
+      "tvgId": "Область 45 HD",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Область 45 HD",
+          "tzShift": 0,
+          "url": "https://rt-ural-krg-htlive.cdn.ngenix.net/hls/CH_R04_OTT_OBLAST45/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_142",
+      "baseName": "Объектив 59 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "objektiv-59",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Объектив 59 HD",
+          "tzShift": 0,
+          "url": "https://rt-ural-perm-htlive.cdn.ngenix.net/hls/CH_R04_OTT_OBJECTIVE59/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_143",
+      "baseName": "ОРТ-Планета (Оренбург)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ОРТ-Планета (Оренбург)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОРТ-Планета (Оренбург)",
+          "tzShift": 0,
+          "url": "https://rt-vlg-orb-htlive.cdn.ngenix.net/hls/CH_R03_ORTPLANET/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_144",
+      "baseName": "Осетия Ирыстон HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "osetia-iryston",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Осетия Ирыстон HD",
+          "tzShift": 0,
+          "url": "http://rt-sth-vkaz-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_VKAZ_IRISTON/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_145",
+      "baseName": "ОТВ Екатеринбург HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "otv-eburg",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОТВ Екатеринбург HD",
+          "tzShift": 0,
+          "url": "https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R02_OTT_OTV_URAL_EKT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_146",
+      "baseName": "ОТВ-Владивосток",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "otv-primorie",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОТВ-Владивосток",
+          "tzShift": 0,
+          "url": "https://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_OTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_147",
+      "baseName": "ОТВ-Сахалин",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "otv-saxalin",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОТВ-Сахалин",
+          "tzShift": 0,
+          "url": "https://s14553.cdn.ngenix.net/hls/CH_R65_OTT_DV_SLIN_OTV_SLIN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_148",
+      "baseName": "ОТВ Челябинск",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ОТВ Челябинск",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОТВ Челябинск",
+          "tzShift": 0,
+          "url": "https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R02_OTT_OTV_CHEL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_149",
+      "baseName": "ОТР",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ОТР",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОТР",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_OTR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_150",
+      "baseName": "ОТС HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ОТС HD",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ОТС HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-nsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_NSK_OTS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_151",
+      "baseName": "Первый городской (Киров)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Первый городской (Киров)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Первый городской (Киров)",
+          "tzShift": 0,
+          "url": "https://rt-vlg-kirov-htlive.cdn.ngenix.net/hls/CH_R03_PERVYGORODSKOY/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_152",
+      "baseName": "Первый областной",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "pervy-oblastnoy-orel",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Первый областной",
+          "tzShift": 0,
+          "url": "https://rt-ct-orl-htlive.cdn.ngenix.net/hls/CH_R01_PERVOBL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_153",
+      "baseName": "Первый Тульский HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "pervy-tulsky",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Первый Тульский HD",
+          "tzShift": 0,
+          "url": "https://rt-ct-tula-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_TULA_PERV_TUL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_154",
+      "baseName": "Первый Ярославский",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Первый Ярославский",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Первый Ярославский",
+          "tzShift": 0,
+          "url": "https://rt-ct-yarl-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_YARL_NTM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_155",
+      "baseName": "Прима-ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "prima",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Прима-ТВ",
+          "tzShift": 0,
+          "url": "https://rt-sib-krsk-htlive.cdn.ngenix.net/hls/CH_R11_OTT_SIB_KRSK_STS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_156",
+      "baseName": "РГВК Дагестан",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "rgvk-dagestan",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "РГВК Дагестан",
+          "tzShift": 0,
+          "url": "https://rt-sth-mahachk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_MAHACHK_DAGESTAN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_157",
+      "baseName": "Регион 29",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Регион 29",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Регион 29",
+          "tzShift": 0,
+          "url": "https://rt-nw-arkh-htlive.cdn.ngenix.net/hls/CH_R02_PRAVDASEVERA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_158",
+      "baseName": "РТС-Абакан",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "rts-abakan",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "РТС-Абакан",
+          "tzShift": 0,
+          "url": "https://rt-sib-abakan-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_ABAKAN_RTS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_159",
+      "baseName": "Русский Север",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Русский Север",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Русский Север",
+          "tzShift": 0,
+          "url": "https://rt-nw-vol-htlive.cdn.ngenix.net/hls/CH_R01_TV7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_160",
+      "baseName": "Русь (Кострома)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Русь (Кострома)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Русь (Кострома)",
+          "tzShift": 0,
+          "url": "https://rt-ct-kostroma-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_KOSTROMA_RUS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_161",
+      "baseName": "Рыбинск-40",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "rybinsk40",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Рыбинск-40",
+          "tzShift": 0,
+          "url": "https://rt-ct-yarl-htlive.cdn.ngenix.net/hls/CH_R01_RYBINSK40/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_162",
+      "baseName": "С1 Сургут HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "s1-surgut",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "С1 Сургут HD",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R04_OTT_C1_URAL_SUR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_163",
+      "baseName": "Самара-24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "samara24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Самара-24",
+          "tzShift": 0,
+          "url": "https://rt-vlg-samara-htlive.cdn.ngenix.net/hls/CH_R03_SAMARA24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_164",
+      "baseName": "Самара-Гис",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Самара-Гис",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Самара-Гис",
+          "tzShift": 0,
+          "url": "https://rt-vlg-samara-htlive.cdn.ngenix.net/hls/CH_R02_SAMARAGIS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_165",
+      "baseName": "Сампо ТВ 360°",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "sampo-tv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Сампо ТВ 360°",
+          "tzShift": 0,
+          "url": "https://rt-nw-pzav-htlive.cdn.ngenix.net/hls/CH_R01_SAMPOTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_166",
+      "baseName": "Саратов-24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "saratov-24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Саратов-24",
+          "tzShift": 0,
+          "url": "https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R01_SARATOV24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_167",
+      "baseName": "Саха",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Саха",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Саха",
+          "tzShift": 0,
+          "url": "http://s34351.cdn.ngenix.net/hls/CH_R03_OTT_DV_YKT_NVC_OTT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_168",
+      "baseName": "Мамонт (Республика Саха - Якутск)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "mamonttv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Мамонт (Республика Саха - Якутск)",
+          "tzShift": 0,
+          "url": "https://s34351.cdn.ngenix.net/hls/CH_R14_MAMONT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_169",
+      "baseName": "Своё ТВ Ставрополь HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "svoyo-tv-stavropol",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Своё ТВ Ставрополь HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-stavr-htlive.cdn.ngenix.net/hls/CH_R03_OTT_STH_STAVR_STV-PLUS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_170",
+      "baseName": "ТВ-7 Абакан",
+      "group": "Wink",
+      "logo": "http://fe-sib.svc.iptv.rt.ru/images/broadcastChannel1578964121507.png",
+      "tvgId": "ТВ-7 Абакан",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ-7 Абакан",
+          "tzShift": 0,
+          "url": "https://rt-sib-abakan-htlive.cdn.ngenix.net/hls/CH_R01_TV7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_171",
+      "baseName": "ТВ21+",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТВ21+",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ21+",
+          "tzShift": 0,
+          "url": "https://rt-nw-murm-htlive.cdn.ngenix.net/hls/CH_R01_TV21PLUS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_172",
+      "baseName": "Татарстан 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tatarstan24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Татарстан 24",
+          "tzShift": 0,
+          "url": "https://rt-vlg-kzn-htlive.cdn.ngenix.net/hls/CH_R02_EFIR24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_173",
+      "baseName": "Сочи24 HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "sochi24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Сочи24 HD",
+          "tzShift": 0,
+          "url": "https://rt-sth-krdar-htlive.cdn.ngenix.net/hls/CH_R01_MAKS241/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_174",
+      "baseName": "Спас",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Спас",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Спас",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_SPAS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_175",
+      "baseName": "СТВ-Байкал",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "stv-baykal",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "СТВ-Байкал",
+          "tzShift": 0,
+          "url": "http://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_UUDE_STVBAYKAL/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_176",
+      "baseName": "ТВ-Губерния",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tv-guberniya",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ-Губерния",
+          "tzShift": 0,
+          "url": "https://rt-ct-vrzh-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_VRZH_TVGUBERNIYA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_177",
+      "baseName": "ТВ-ИН-Магнитогорск",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tv-in",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ-ИН-Магнитогорск",
+          "tzShift": 0,
+          "url": "https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R01_TVIN_MAGN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_178",
+      "baseName": "ТВ-Колыма-Плюс HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "kolyma-plus",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВ-Колыма-Плюс HD",
+          "tzShift": 0,
+          "url": "https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_KOLYMA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_179",
+      "baseName": "Тивиком HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Тивиком HD",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Тивиком HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R01_TIVICOM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_180",
+      "baseName": "ТК Центр Красноярск",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТК Центр Красноярск",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТК Центр Красноярск",
+          "tzShift": 0,
+          "url": "https://rt-sib-krsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_KRSK_CENTRKRSN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_181",
+      "baseName": "ТКР Рязань",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТКР Рязань",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТКР Рязань",
+          "tzShift": 0,
+          "url": "https://rt-ct-ryaz-htlive.cdn.ngenix.net/hls/CH_R01_OTT_CT_RYAZ_TKP/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_182",
+      "baseName": "ТНВ-Планета",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТНВ-Планета",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТНВ-Планета",
+          "tzShift": 0,
+          "url": "https://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R05_TNV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_183",
+      "baseName": "ТНВ-Татарстан",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТНВ-Татарстан",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТНВ-Татарстан",
+          "tzShift": 0,
+          "url": "https://rt-vlg-kzn-htlive.cdn.ngenix.net/hls/CH_R01_TNVT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_184",
+      "baseName": "ТНР 24 (Нижневартовск)",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ТНР 24 (Нижневартовск)",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТНР 24 (Нижневартовск)",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R01_OTT_TNR24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_185",
+      "baseName": "Толк",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Толк",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Толк",
+          "tzShift": 0,
+          "url": "https://rt-sib-bul-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_BUL_TOLK/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_186",
+      "baseName": "Толпар ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tolpartv",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Толпар ТВ",
+          "tzShift": 0,
+          "url": "https://s45177.cdn.ngenix.net/hls/CH_R02_TOLPAR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_187",
+      "baseName": "Тольятти-24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tolyatti24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Тольятти-24",
+          "tzShift": 0,
+          "url": "https://rt-vlg-samara-htlive.cdn.ngenix.net/hls/CH_R01_TOLYTTI24/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_188",
+      "baseName": "Томское время HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "tomskoe-vremia",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Томское время HD",
+          "tzShift": 0,
+          "url": "https://rt-sib-tomsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_TOMSK_TOMSKVREMIA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_189",
+      "baseName": "Тюменское время",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Тюменское время",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Тюменское время",
+          "tzShift": 0,
+          "url": "https://rt-ural-tum-htlive.cdn.ngenix.net/hls/CH_R01_OTT_TUMVR_URAL_TUM/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_190",
+      "baseName": "Удмуртия",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Удмуртия",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Удмуртия",
+          "tzShift": 0,
+          "url": "https://rt-vlg-izhsk-htlive.cdn.ngenix.net/hls/CH_R03_MYUDMURTIA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_191",
+      "baseName": "Ульяновская правда",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Ульяновская правда",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ульяновская правда",
+          "tzShift": 0,
+          "url": "https://rt-vlg-ul-htlive.cdn.ngenix.net/hls/CH_R01_ULPRAVDA/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_192",
+      "baseName": "Хамдан",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Хамдан",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Хамдан",
+          "tzShift": 0,
+          "url": "http://rt-sth-elista-htlive.cdn.ngenix.net/hls/CH_R01_OTT_STH_ELISTA_HAMDAN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_193",
+      "baseName": "Эфир",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Эфир",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Эфир",
+          "tzShift": 0,
+          "url": "https://rt-vlg-kzn-htlive.cdn.ngenix.net/hls/CH_R01_EFIR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_194",
+      "baseName": "Югорск ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Югорск ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Югорск ТВ",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R01_YUGORSKTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_195",
+      "baseName": "Югра",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Югра",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Югра",
+          "tzShift": 0,
+          "url": "https://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R04_OTT_UGRA_URAL_SUR/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_196",
+      "baseName": "Шаян ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Шаян ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Шаян ТВ",
+          "tzShift": 0,
+          "url": "https://s45177.cdn.ngenix.net/hls/CH_R03_SHAYNTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_197",
+      "baseName": "Экспресс HD",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "express",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Экспресс HD",
+          "tzShift": 0,
+          "url": "https://rt-vlg-penza-htlive.cdn.ngenix.net/hls/CH_R01_EXPRESS/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_198",
+      "baseName": "Юрган",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Юрган",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Юрган",
+          "tzShift": 0,
+          "url": "https://rt-nw-komi-htlive.cdn.ngenix.net/hls/CH_R01_YURGAN/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_199",
+      "baseName": "ЮТВ Чебоксары",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "ЮТВ Чебоксары",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ЮТВ Чебоксары",
+          "tzShift": 0,
+          "url": "https://rt-vlg-chr-htlive.cdn.ngenix.net/hls/CH_R01_UTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_200",
+      "baseName": "Якутия 24",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Якутия 24",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Якутия 24",
+          "tzShift": 0,
+          "url": "https://s34351.cdn.ngenix.net/hls/CH_R14_OTT_DV_YKT_YKT/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_201",
+      "baseName": "Ямал-Регион",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Ямал-Регион",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Ямал-Регион",
+          "tzShift": 0,
+          "url": "https://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_YAMREG_URAL_YNF/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    },
+    {
+      "id": "ch_202",
+      "baseName": "Матч ТВ",
+      "group": "Wink",
+      "logo": "",
+      "tvgId": "Матч ТВ",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Матч ТВ",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MATCHTV/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ]
+    }
+  ]
+}

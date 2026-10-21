@@ -1,0 +1,21 @@
+{
+  "name": "wink-online-tv",
+  "version": "2.0.0",
+  "description": "Премиальный сервис Онлайн ТВ с архивом передач и умным часовым поясом на базе Wink",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "test": "node scratch_analyze.js"
+  },
+  "keywords": [
+    "iptv",
+    "wink",
+    "catchup",
+    "timeshift",
+    "epg",
+    "hls"
+  ],
+  "author": "Antigravity Media",
+  "license": "MIT"
+}
