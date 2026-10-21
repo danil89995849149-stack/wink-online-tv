@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: wink-online-tv
+    env: node
+    plan: free
+    buildCommand: npm install --production
+    startCommand: node server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
