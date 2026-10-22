@@ -55,6 +55,24 @@
 
       this.ui.playBtn = document.getElementById('ctrlPlayBtn');
       this.ui.playIcon = document.getElementById('ctrlPlayIcon');
+      this.ui.prevChannelBtn = document.getElementById('ctrlPrevChannelBtn');
+      this.ui.nextChannelBtn = document.getElementById('ctrlNextChannelBtn');
+      this.ui.toggleSidebarBtn = document.getElementById('togglePlayerSidebarBtn');
+      this.ui.closeSidebarBtn = document.getElementById('playerSidebarClose');
+      this.ui.playerSidebar = document.getElementById('playerSidebar');
+
+      // Элементы OSD
+      this.ui.channelOsd = document.getElementById('channelOsd');
+      this.ui.osdNum = document.getElementById('osdChannelNum');
+      this.ui.osdName = document.getElementById('osdChannelName');
+      this.ui.osdLogo = document.getElementById('osdLogo');
+      this.ui.osdLiveBadge = document.getElementById('osdLiveBadge');
+      this.ui.osdEpgBox = document.getElementById('osdEpgBox');
+      this.ui.osdProgTitle = document.getElementById('osdProgTitle');
+      this.ui.osdProgTime = document.getElementById('osdProgTime');
+      this.ui.osdProgRemain = document.getElementById('osdProgRemain');
+      this.ui.osdProgFill = document.getElementById('osdProgFill');
+
       this.ui.muteBtn = document.getElementById('ctrlMuteBtn');
       this.ui.volumeSlider = document.getElementById('ctrlVolumeSlider');
       this.ui.skipAdBtn = document.getElementById('ctrlSkipAdBtn');
@@ -147,6 +165,11 @@
 
       // Управление контролами
       if (this.ui.playBtn) this.ui.playBtn.addEventListener('click', () => this.togglePlay());
+      if (this.ui.prevChannelBtn) this.ui.prevChannelBtn.addEventListener('click', () => this.playPrevChannel());
+      if (this.ui.nextChannelBtn) this.ui.nextChannelBtn.addEventListener('click', () => this.playNextChannel());
+      if (this.ui.toggleSidebarBtn) this.ui.toggleSidebarBtn.addEventListener('click', () => this.togglePlayerSidebar());
+      if (this.ui.closeSidebarBtn) this.ui.closeSidebarBtn.addEventListener('click', () => this.setPlayerSidebarOpen(false));
+
       if (this.ui.muteBtn) this.ui.muteBtn.addEventListener('click', () => this.toggleMute());
       if (this.ui.volumeSlider) {
         this.ui.volumeSlider.addEventListener('input', (e) => this.setVolume(parseFloat(e.target.value)));
@@ -370,6 +393,7 @@
 
       const proxiedUrl = this.buildStreamUrl(this.currentFeed.url, this.currentFeed.userAgent);
       this.loadUrlIntoPlayer(proxiedUrl);
+      this.showOsd(channel);
 
       if (window.WinkApp) {
         window.WinkApp.onChannelChanged(channel, this.currentFeed);
@@ -400,10 +424,100 @@
       const savedPos = this.getSavedArchivePosition(channel.id, program.start);
 
       this.loadUrlIntoPlayer(proxiedUrl, savedPos);
+      this.showOsd(channel);
 
       if (savedPos > 30 && window.WinkApp) {
         window.WinkApp.showToast(`⏪ Возобновлено с ${this.formatDuration(savedPos)}`);
       }
+    }
+
+    playNextChannel() {
+      if (!window.WinkPlaylist || !window.WinkPlaylist.channels.length) return;
+      const channels = window.WinkPlaylist.channels;
+      let currentIndex = -1;
+      if (this.currentChannel) {
+        currentIndex = channels.findIndex(c => c.id === this.currentChannel.id);
+      }
+      let nextIndex = currentIndex + 1;
+      if (nextIndex >= channels.length) nextIndex = 0;
+      const targetCh = channels[nextIndex];
+      this.playLive(targetCh);
+      if (window.WinkPlaylist) window.WinkPlaylist.highlightActiveRow(targetCh.id);
+      if (window.WinkApp && window.WinkApp.updateBrowserUrl) window.WinkApp.updateBrowserUrl(targetCh);
+    }
+
+    playPrevChannel() {
+      if (!window.WinkPlaylist || !window.WinkPlaylist.channels.length) return;
+      const channels = window.WinkPlaylist.channels;
+      let currentIndex = -1;
+      if (this.currentChannel) {
+        currentIndex = channels.findIndex(c => c.id === this.currentChannel.id);
+      }
+      let prevIndex = currentIndex - 1;
+      if (prevIndex < 0) prevIndex = channels.length - 1;
+      const targetCh = channels[prevIndex];
+      this.playLive(targetCh);
+      if (window.WinkPlaylist) window.WinkPlaylist.highlightActiveRow(targetCh.id);
+      if (window.WinkApp && window.WinkApp.updateBrowserUrl) window.WinkApp.updateBrowserUrl(targetCh);
+    }
+
+    togglePlayerSidebar() {
+      const isOpen = this.ui.playerSidebar && this.ui.playerSidebar.classList.contains('open');
+      this.setPlayerSidebarOpen(!isOpen);
+    }
+
+    setPlayerSidebarOpen(open) {
+      if (!this.ui.playerSidebar) return;
+      this.ui.playerSidebar.classList.toggle('open', Boolean(open));
+      if (open && window.WinkPlaylist && this.currentChannel) {
+        window.WinkPlaylist.highlightActiveRow(this.currentChannel.id);
+      }
+    }
+
+    showOsd(channel) {
+      if (!channel || !this.ui.channelOsd) return;
+      clearTimeout(this.osdTimer);
+
+      const channels = window.WinkPlaylist ? window.WinkPlaylist.channels : [];
+      const idx = channels.findIndex(c => c.id === channel.id);
+      if (this.ui.osdNum) this.ui.osdNum.textContent = idx >= 0 ? (idx + 1) : '';
+      if (this.ui.osdName) this.ui.osdName.textContent = channel.baseName || channel.name;
+
+      if (this.ui.osdLogo) {
+        if (channel.logo) {
+          this.ui.osdLogo.src = channel.logo;
+          this.ui.osdLogo.style.display = 'block';
+        } else {
+          this.ui.osdLogo.style.display = 'none';
+        }
+      }
+
+      if (this.ui.osdLiveBadge) {
+        this.ui.osdLiveBadge.textContent = this.mode === 'catchup' ? 'АРХИВ' : 'LIVE';
+        this.ui.osdLiveBadge.style.background = this.mode === 'catchup' ? '#10b981' : '#ef4444';
+      }
+
+      // EPG в OSD
+      const epgData = window.WinkPlaylist && window.WinkPlaylist.currentEpgMap ? window.WinkPlaylist.currentEpgMap[channel.id] : null;
+      if (epgData && epgData.title) {
+        if (this.ui.osdEpgBox) this.ui.osdEpgBox.style.display = 'block';
+        if (this.ui.osdProgTitle) this.ui.osdProgTitle.textContent = epgData.title;
+        if (this.ui.osdProgTime && epgData.start && epgData.stop) {
+          const t1 = window.WinkTimezone ? window.WinkTimezone.formatTime(epgData.start) : '--:--';
+          const t2 = window.WinkTimezone ? window.WinkTimezone.formatTime(epgData.stop) : '--:--';
+          this.ui.osdProgTime.textContent = `${t1} – ${t2}`;
+        }
+        if (this.ui.osdProgFill) {
+          this.ui.osdProgFill.style.width = `${Math.min(100, Math.max(0, epgData.progress || 0))}%`;
+        }
+      } else {
+        if (this.ui.osdEpgBox) this.ui.osdEpgBox.style.display = 'none';
+      }
+
+      this.ui.channelOsd.classList.add('visible');
+      this.osdTimer = setTimeout(() => {
+        if (this.ui.channelOsd) this.ui.channelOsd.classList.remove('visible');
+      }, 3500);
     }
 
     loadUrlIntoPlayer(url, seekSeconds = 0) {
@@ -609,6 +723,24 @@
         case 'Space':
           e.preventDefault();
           this.togglePlay();
+          break;
+        case 'PageUp':
+          e.preventDefault();
+          this.playPrevChannel();
+          break;
+        case 'PageDown':
+          e.preventDefault();
+          this.playNextChannel();
+          break;
+        case 'KeyC':
+          e.preventDefault();
+          this.togglePlayerSidebar();
+          break;
+        case 'Escape':
+          if (this.ui.playerSidebar && this.ui.playerSidebar.classList.contains('open')) {
+            e.preventDefault();
+            this.setPlayerSidebarOpen(false);
+          }
           break;
         case 'ArrowLeft':
           e.preventDefault();

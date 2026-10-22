@@ -252,39 +252,254 @@
       line-height: 1.2 !important;
       flex-shrink: 0 !important;
     }
-    .channels-filter-bar {
+    /* УМНЫЙ OSD-БАННЕР ПРИ ПЕРЕКЛЮЧЕНИИ КАНАЛОВ (КАК В STANDALONE) */
+    .channel-osd {
+      position: absolute !important;
+      bottom: 110px !important;
+      left: 28px !important;
+      max-width: 520px !important;
+      background: rgba(11, 15, 26, 0.92) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      border-radius: 14px !important;
+      padding: 14px 18px !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75) !important;
+      z-index: 1005 !important;
+      pointer-events: none !important;
+      opacity: 0 !important;
+      transform: translateY(16px) !important;
+      transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    }
+    .channel-osd.visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    .osd-header {
       display: flex !important;
-      gap: 6px !important;
-      padding: 8px 12px !important;
-      background: #0d121f !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
-      overflow-x: auto !important;
-      flex-shrink: 0 !important;
-      scrollbar-width: none !important;
+      align-items: center !important;
+      gap: 12px !important;
     }
-    .channels-filter-bar::-webkit-scrollbar {
-      display: none !important;
-    }
-    .channel-filter-chip {
+    .osd-logo {
+      width: 42px !important;
+      height: 42px !important;
+      object-fit: contain !important;
+      border-radius: 8px !important;
       background: rgba(255, 255, 255, 0.05) !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      color: #94a3b8 !important;
-      font-size: 0.72rem !important;
-      font-weight: 700 !important;
-      padding: 4px 10px !important;
-      border-radius: 20px !important;
-      cursor: pointer !important;
+      padding: 2px !important;
+      flex-shrink: 0 !important;
+    }
+    .osd-channel-num {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: #60a5fa !important;
+      min-width: 24px !important;
+    }
+    .osd-channel-name {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
       white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      letter-spacing: -0.3px !important;
+    }
+    .osd-live-badge {
+      margin-left: auto !important;
+      font-size: 0.7rem !important;
+      font-weight: 800 !important;
+      padding: 3px 8px !important;
+      border-radius: 4px !important;
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      letter-spacing: 0.5px !important;
+      flex-shrink: 0 !important;
+    }
+    .osd-epg-box {
+      margin-top: 10px !important;
+      padding-top: 10px !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .osd-prog-title {
+      font-size: 0.94rem !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      line-height: 1.3 !important;
+    }
+    .osd-prog-meta {
+      display: flex !important;
+      justify-content: space-between !important;
+      font-size: 0.78rem !important;
+      color: #94a3b8 !important;
+      margin-top: 4px !important;
+    }
+    .osd-prog-bar {
+      width: 100% !important;
+      height: 4px !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+      border-radius: 2px !important;
+      margin-top: 6px !important;
+      overflow: hidden !important;
+    }
+    .osd-prog-fill {
+      height: 100% !important;
+      background: #3b82f6 !important;
+      border-radius: 2px !important;
+      width: 0%;
+      transition: width 0.3s ease !important;
+    }
+
+    /* ВСПЛЫВАЮЩИЙ САЙДБАР КАНАЛОВ ВНУТРИ ВИДЕООКНА */
+    .player-sidebar {
+      position: absolute !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 320px !important;
+      max-width: 85% !important;
+      background: rgba(9, 13, 22, 0.9) !important;
+      backdrop-filter: blur(24px) !important;
+      -webkit-backdrop-filter: blur(24px) !important;
+      border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+      transform: translateX(100%) !important;
+      visibility: hidden !important;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.25s !important;
+      display: flex !important;
+      flex-direction: column !important;
+      z-index: 1010 !important;
+      pointer-events: auto !important;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.75) !important;
+    }
+    .player-sidebar.open {
+      transform: translateX(0) !important;
+      visibility: visible !important;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s !important;
+    }
+    .player-sidebar-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 16px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: rgba(0, 0, 0, 0.5) !important;
+    }
+    .player-sidebar-title {
+      font-size: 0.95rem !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+    }
+    .player-sidebar-close {
+      background: transparent !important;
+      border: none !important;
+      color: #94a3b8 !important;
+      font-size: 1.15rem !important;
+      cursor: pointer !important;
+      padding: 4px 8px !important;
+      border-radius: 6px !important;
       transition: all 0.15s ease !important;
     }
-    .channel-filter-chip:hover {
+    .player-sidebar-close:hover {
+      color: #ffffff !important;
       background: rgba(255, 255, 255, 0.1) !important;
-      color: #fff !important;
     }
-    .channel-filter-chip.active {
+    .player-sidebar-list {
+      flex: 1 1 0 !important;
+      overflow-y: auto !important;
+      padding: 8px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 4px !important;
+    }
+    .player-sidebar-list::-webkit-scrollbar {
+      width: 5px !important;
+    }
+    .player-sidebar-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-radius: 5px !important;
+    }
+    .player-sidebar-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 7px 10px !important;
+      border-radius: 8px !important;
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+    }
+    .player-sidebar-item:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+      transform: translateX(3px) !important;
+    }
+    .player-sidebar-item.active {
       background: rgba(59, 130, 246, 0.25) !important;
+      border: 1px solid #3b82f6 !important;
+    }
+    .player-sidebar-logo {
+      width: 32px !important;
+      height: 32px !important;
+      object-fit: contain !important;
+      border-radius: 6px !important;
+      background: #000 !important;
+      flex-shrink: 0 !important;
+    }
+    .player-sidebar-name {
+      font-size: 0.88rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    /* ЦЕНТРАЛЬНАЯ ГРУППА КНОПОК ПЛЕЕРА */
+    .player-ctrl-center-group {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 12px !important;
+    }
+    .channel-nav-btn {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 50% !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
+      color: #ffffff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+    }
+    .channel-nav-btn:hover {
+      background: rgba(59, 130, 246, 0.3) !important;
       border-color: #3b82f6 !important;
-      color: #60a5fa !important;
+      color: #93c5fd !important;
+      transform: scale(1.08) !important;
+    }
+    .btn-play-main {
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50% !important;
+      background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+      border: none !important;
+      color: #ffffff !important;
+      font-size: 1.25rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4) !important;
+      transition: all 0.15s ease !important;
+    }
+    .btn-play-main:hover {
+      transform: scale(1.08) !important;
+      box-shadow: 0 6px 18px rgba(59, 130, 246, 0.6) !important;
     }
 
     /* ЦЕНТРАЛЬНАЯ ОБЛАСТЬ ПЛЕЕРА */
@@ -423,7 +638,7 @@
   <!-- ==================== ОСНОВНОЙ МАКЕТ: 3 КОЛОНКИ ==================== -->
   <div class="main-layout">
 
-    <!-- ЛЕВАЯ КОЛОНКА: Все телеканалы для быстрого скролла колесиком -->
+    <!-- ЛЕВАЯ КОЛОНКА: Все телеканалы для быстрого скролла колесиком (единая чистая колонка) -->
     <aside class="channels-sidebar" id="channelsSidebar">
       <div class="channels-header">
         <div class="channels-header-left">
@@ -431,13 +646,6 @@
           <span class="channels-title">Телеканалы</span>
         </div>
         <span class="channels-count-badge" id="channelsCountBadge">0</span>
-      </div>
-      <!-- Быстрые фильтры каналов: Все, HD, Архив, С программой -->
-      <div class="channels-filter-bar" id="channelsFilterBar">
-        <button class="channel-filter-chip active" data-filter="all">Все</button>
-        <button class="channel-filter-chip" data-filter="hd">HD</button>
-        <button class="channel-filter-chip" data-filter="archive">Архив</button>
-        <button class="channel-filter-chip" data-filter="epg">С программой</button>
       </div>
       <!-- Список каналов (свободный скролл колесиком мыши) -->
       <div class="channels-scroll-list" id="channelListContainer">
@@ -447,11 +655,42 @@
 
     <!-- ЦЕНТРАЛЬНАЯ ОБЛАСТЬ: Плеер -->
     <main class="player-main-area">
-      <div class="player-container">
+      <div class="player-container" id="playerContainer">
         <div class="video-wrapper" id="videoWrapper">
           <video id="tvPlayer" playsinline preload="auto"></video>
 
-          <!-- Верхний оверлей плеера (часовой пояс скрыт) -->
+          <!-- Умный OSD-баннер при переключении каналов (как в standalone плеере) -->
+          <div class="channel-osd" id="channelOsd">
+            <div class="osd-content">
+              <div class="osd-header">
+                <img class="osd-logo" id="osdLogo" alt="" />
+                <span class="osd-channel-num" id="osdChannelNum">1</span>
+                <span class="osd-channel-name" id="osdChannelName">Первый канал</span>
+                <span class="osd-live-badge" id="osdLiveBadge">LIVE</span>
+              </div>
+              <div class="osd-epg-box" id="osdEpgBox">
+                <div class="osd-prog-title" id="osdProgTitle">Телепередача</div>
+                <div class="osd-prog-meta">
+                  <span class="osd-prog-time" id="osdProgTime">--:--</span>
+                  <span class="osd-prog-remain" id="osdProgRemain"></span>
+                </div>
+                <div class="osd-prog-bar">
+                  <div class="osd-prog-fill" id="osdProgFill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Всплывающий список каналов ВНУТРИ плеера поверх видео -->
+          <div class="player-sidebar" id="playerSidebar">
+            <div class="player-sidebar-header">
+              <span class="player-sidebar-title">📺 Список каналов</span>
+              <button class="player-sidebar-close" id="playerSidebarClose" title="Закрыть (Esc)">✕</button>
+            </div>
+            <div class="player-sidebar-list" id="playerSidebarList"></div>
+          </div>
+
+          <!-- Верхний оверлей плеера -->
           <div class="player-overlay player-top-bar interactive">
             <div class="player-channel-info">
               <img class="player-channel-logo" id="playerChannelLogo" src="" alt="" onerror="this.style.opacity='0.2'">
@@ -494,12 +733,8 @@
             <!-- Ряд кнопок управления -->
             <div class="controls-row">
               
-              <!-- Левая группа: Play/Pause, Звук, Перемотка -->
+              <!-- Левая группа: Звук и быстрая перемотка -->
               <div class="controls-left">
-                <button class="ctrl-btn btn-play" id="ctrlPlayBtn" title="Воспроизведение / Пауза (Space)">
-                  <span id="ctrlPlayIcon">▶</span>
-                </button>
-
                 <div class="volume-wrap">
                   <button class="ctrl-btn" id="ctrlMuteBtn" title="Звук (M)">🔊</button>
                   <input type="range" class="volume-slider" id="ctrlVolumeSlider" min="0" max="1" step="0.05" value="1" title="Громкость">
@@ -514,19 +749,35 @@
                 <button class="ctrl-btn" id="ctrlFwd30" title="Вперед 30 сек">30 ↻</button>
               </div>
 
-              <!-- Центральная группа: Пропуск рекламы и возврат к Live -->
+              <!-- Центральная группа: Переключение каналов и Play/Pause (как в standalone) -->
               <div class="controls-center">
+                <div class="player-ctrl-center-group">
+                  <button class="channel-nav-btn" id="ctrlPrevChannelBtn" aria-label="Предыдущий канал" title="Предыдущий канал (← или PgUp)">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2.5"/></svg>
+                  </button>
+
+                  <button class="btn-play-main" id="ctrlPlayBtn" title="Воспроизведение / Пауза (Space)">
+                    <span id="ctrlPlayIcon">▶</span>
+                  </button>
+
+                  <button class="channel-nav-btn" id="ctrlNextChannelBtn" aria-label="Следующий канал" title="Следующий канал (→ или PgDn)">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2.5"/></svg>
+                  </button>
+                </div>
+
                 <button class="skip-ad-btn" id="ctrlSkipAdBtn" style="display: none;" title="Пропустить рекламный блок">
-                  <span>⏩</span> <span>Пропустить рекламу (+90с)</span>
+                  <span>⏩</span> <span>+90с</span>
                 </button>
 
                 <button class="jump-live-btn" id="ctrlJumpLiveBtn" style="display: none;" title="Вернуться к прямому эфиру">
-                  <span>🔴</span> <span>В прямой эфир</span>
+                  <span>🔴</span> <span>В эфир</span>
                 </button>
               </div>
 
-              <!-- Правая группа: Скорость, PiP, Fullscreen -->
+              <!-- Правая группа: Список каналов в плеере, Скорость, PiP, Fullscreen -->
               <div class="controls-right">
+                <button class="ctrl-btn" id="togglePlayerSidebarBtn" title="Список каналов внутри видео (C)" style="font-size: 1.1rem;">📺</button>
+
                 <select class="ctrl-select" id="ctrlSpeedSelect" title="Скорость воспроизведения">
                   <option value="0.75">0.75x</option>
                   <option value="1" selected>1.0x</option>
