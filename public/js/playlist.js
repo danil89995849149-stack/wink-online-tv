@@ -239,7 +239,7 @@
     }
 
     highlightActiveRow(channelId) {
-      // 1. В основном списке
+      // 1. В основном списке каналов слева
       if (this.listContainer) {
         const allRows = this.listContainer.querySelectorAll('.channel-row');
         allRows.forEach(r => r.classList.remove('active'));
@@ -247,19 +247,28 @@
         const activeRow = document.getElementById(`ch_row_${channelId}`);
         if (activeRow) {
           activeRow.classList.add('active');
-          activeRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          const rowTop = activeRow.offsetTop;
+          const containerTop = this.listContainer.offsetTop;
+          const targetScroll = Math.max(0, rowTop - containerTop - 60);
+          this.listContainer.scrollTo({ top: targetScroll, behavior: 'smooth' });
         }
       }
 
-      // 2. Во всплывающем списке внутри плеера
+      // 2. Во всплывающем списке внутри плеера (скроллим ТОЛЬКО если сайдбар открыт)
       if (this.playerSidebarList) {
         const allPside = this.playerSidebarList.querySelectorAll('.player-sidebar-item');
         allPside.forEach(r => r.classList.remove('active'));
 
+        const isSidebarOpen = window.WinkPlayer && window.WinkPlayer.ui.playerSidebar && window.WinkPlayer.ui.playerSidebar.classList.contains('open');
         const activePside = document.getElementById(`pside_row_${channelId}`);
         if (activePside) {
           activePside.classList.add('active');
-          activePside.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          if (isSidebarOpen) {
+            const psideTop = activePside.offsetTop;
+            const psideContTop = this.playerSidebarList.offsetTop;
+            const targetScroll = Math.max(0, psideTop - psideContTop - 40);
+            this.playerSidebarList.scrollTo({ top: targetScroll, behavior: 'smooth' });
+          }
         }
       }
     }

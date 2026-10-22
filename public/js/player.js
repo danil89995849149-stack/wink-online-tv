@@ -442,7 +442,9 @@
       if (!this.ui.playerSidebar) return;
       this.ui.playerSidebar.classList.toggle('open', Boolean(open));
       if (open && window.WinkPlaylist && this.currentChannel) {
-        window.WinkPlaylist.highlightActiveRow(this.currentChannel.id);
+        setTimeout(() => {
+          window.WinkPlaylist.highlightActiveRow(this.currentChannel.id);
+        }, 50);
       }
     }
 

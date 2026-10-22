@@ -1,7 +1,7 @@
 {
-  "updatedAt": 1792627872380,
+  "updatedAt": 1792629154904,
   "source": "https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/TV",
-  "totalChannels": 730,
+  "totalChannels": 722,
   "channels": [
     {
       "id": "ch_3",
@@ -344,54 +344,6 @@
       "slug": "pyatyy-kanal"
     },
     {
-      "id": "ch_46",
-      "baseName": "Пятый канал +4",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/3/logo_256.webp",
-      "tvgId": "Пятый канал +4",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Пятый канал +4",
-          "tzShift": 0,
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "pyatyy-kanal-4"
-    },
-    {
-      "id": "ch_47",
-      "baseName": "Пятый канал +7",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/3/logo_256.webp",
-      "tvgId": "Пятый канал +7",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Пятый канал +7",
-          "tzShift": 0,
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "pyatyy-kanal-7"
-    },
-    {
       "id": "ch_12",
       "baseName": "Россия К",
       "group": "Wink",
@@ -584,54 +536,6 @@
       "slug": "tv-tsentr"
     },
     {
-      "id": "ch_25",
-      "baseName": "ТВЦ +4",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/129/logo_256.webp",
-      "tvgId": "ТВЦ +4",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "ТВЦ +4",
-          "tzShift": 0,
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_4/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": false,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "tvts-4"
-    },
-    {
-      "id": "ch_26",
-      "baseName": "ТВЦ +7",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/129/logo_256.webp",
-      "tvgId": "ТВЦ +7",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "ТВЦ +7",
-          "tzShift": 0,
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_7/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": false,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "tvts-7"
-    },
-    {
       "id": "ch_5",
       "baseName": "РЕН ТВ",
       "group": "Wink",
@@ -678,54 +582,6 @@
       "sourceType": "wink",
       "isHd": false,
       "slug": "ren-tv"
-    },
-    {
-      "id": "ch_6",
-      "baseName": "Рен ТВ +4",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/113/logo_256.webp",
-      "tvgId": "Рен ТВ +4",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Рен ТВ +4",
-          "tzShift": 0,
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_4/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "ren-tv-4"
-    },
-    {
-      "id": "ch_7",
-      "baseName": "Рен ТВ +7",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/113/logo_256.webp",
-      "tvgId": "Рен ТВ +7",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Рен ТВ +7",
-          "tzShift": 0,
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_7/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "ren-tv-7"
     },
     {
       "id": "ch_174",
@@ -855,78 +711,6 @@
       "slug": "domashniy"
     },
     {
-      "id": "ch_32",
-      "baseName": "Домашний +2",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/67/logo_256.webp",
-      "tvgId": "Домашний +2",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Домашний +2",
-          "tzShift": 0,
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_2/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "domashniy-2"
-    },
-    {
-      "id": "ch_33",
-      "baseName": "Домашний +4",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/67/logo_256.webp",
-      "tvgId": "Домашний +4",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Домашний +4",
-          "tzShift": 0,
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY_4/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "domashniy-4"
-    },
-    {
-      "id": "ch_34",
-      "baseName": "Домашний +7",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/67/logo_256.webp",
-      "tvgId": "Домашний +7",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Домашний +7",
-          "tzShift": 0,
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_7/variant.m3u8",
-          "catchup": "append",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "domashniy-7"
-    },
-    {
       "id": "ch_27",
       "baseName": "ТВ3",
       "group": "Wink",
@@ -980,62 +764,6 @@
       "sourceType": "wink",
       "isHd": true,
       "slug": "tv3"
-    },
-    {
-      "id": "ch_17",
-      "baseName": "Пятница",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/109/logo_256.webp",
-      "tvgId": "Пятница",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Пятница",
-          "tzShift": 0,
-          "shiftLabel": "МСК+0",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Пятница! (+2)",
-          "tzShift": 2,
-          "shiftLabel": "МСК+2",
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_2/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Пятница! (+4)",
-          "tzShift": 4,
-          "shiftLabel": "МСК+4",
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Пятница! (+5)",
-          "tzShift": 5,
-          "shiftLabel": "МСК+5",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Пятница! (+7)",
-          "tzShift": 7,
-          "shiftLabel": "МСК+7",
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_7/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "pyatnitsa"
     },
     {
       "id": "ch_18",
@@ -1147,54 +875,6 @@
       "sourceType": "wink",
       "isHd": false,
       "slug": "zvezda"
-    },
-    {
-      "id": "ch_37",
-      "baseName": "Мир",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/88/logo_256.webp",
-      "tvgId": "Мир",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Мир",
-          "tzShift": 0,
-          "shiftLabel": "МСК+0",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "МИР (+2)",
-          "tzShift": 2,
-          "shiftLabel": "МСК+2",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_2/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "МИР (+4)",
-          "tzShift": 4,
-          "shiftLabel": "МСК+4",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_4/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "МИР (+7)",
-          "tzShift": 7,
-          "shiftLabel": "МСК+7",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_7/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "mir"
     },
     {
       "id": "ch_38",
@@ -1355,54 +1035,6 @@
       "slug": "muz-tv"
     },
     {
-      "id": "ch_41",
-      "baseName": "МУЗ ТВ",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/93/logo_256.webp",
-      "tvgId": "МУЗ ТВ",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Муз ТВ",
-          "tzShift": 0,
-          "shiftLabel": "МСК+0",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "МУЗ ТВ (+2)",
-          "tzShift": 2,
-          "shiftLabel": "МСК+2",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_2/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "МУЗ ТВ (+4)",
-          "tzShift": 4,
-          "shiftLabel": "МСК+4",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_4/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "МУЗ ТВ (+7)",
-          "tzShift": 7,
-          "shiftLabel": "МСК+7",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_7/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "muz-tv-2"
-    },
-    {
       "id": "ch_16",
       "baseName": "СОЛНЦЕ",
       "group": "Wink",
@@ -1545,54 +1177,6 @@
       "sourceType": "wink",
       "isHd": false,
       "slug": "che"
-    },
-    {
-      "id": "ch_29",
-      "baseName": "Че!",
-      "group": "Wink",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/167/logo_256.webp",
-      "tvgId": "Че!",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Че",
-          "tzShift": 0,
-          "shiftLabel": "МСК+0",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Че! (+2)",
-          "tzShift": 2,
-          "shiftLabel": "МСК+2",
-          "url": "https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R02_OTT_PERETZ/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Че! (+4)",
-          "tzShift": 4,
-          "shiftLabel": "МСК+4",
-          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_CHE_4/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        },
-        {
-          "fullName": "Че! (+7)",
-          "tzShift": 7,
-          "shiftLabel": "МСК+7",
-          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ_7/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": true,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "che-2"
     },
     {
       "id": "ch_15",
@@ -3105,30 +2689,6 @@
       "slug": "volga"
     },
     {
-      "id": "ch_85",
-      "baseName": "Волгоград 1",
-      "group": "Wink",
-      "logo": "http://fe-sth.svc.iptv.rt.ru/images/broadcastChannel1472218027991.png",
-      "tvgId": "Волгоград 1",
-      "hasArchive": true,
-      "archiveDays": 3,
-      "feeds": [
-        {
-          "fullName": "Волгоград 1",
-          "tzShift": 0,
-          "shiftLabel": "МСК+0",
-          "url": "http://rt-sth-vgrad-htlive.cdn.ngenix.net/hls/CH_R06_OTT_STH_VGRAD_VOLGOGRAD1/variant.m3u8",
-          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
-          "userAgent": "ExoPlayer2/2.37"
-        }
-      ],
-      "hasEpg": false,
-      "isWink": true,
-      "sourceType": "wink",
-      "isHd": false,
-      "slug": "volgograd-1"
-    },
-    {
       "id": "ch_86",
       "baseName": "Волгоград 1 HD",
       "group": "Wink",
@@ -3142,6 +2702,14 @@
           "tzShift": 0,
           "url": "https://rt-sth-vgrad-htlive.cdn.ngenix.net/hls/CH_R06_OTT_STH_VGRAD_VOLGOGRAD1/variant.m3u8",
           "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        },
+        {
+          "fullName": "Волгоград 1",
+          "tzShift": 0,
+          "shiftLabel": "МСК+0",
+          "url": "http://rt-sth-vgrad-htlive.cdn.ngenix.net/hls/CH_R06_OTT_STH_VGRAD_VOLGOGRAD1/variant.m3u8",
           "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
           "userAgent": "ExoPlayer2/2.37"
         }
@@ -4403,6 +3971,12 @@
           "timezoneShift": 0,
           "isHd": true,
           "isExternal": true
+        },
+        {
+          "name": "ОТВ (Екатеринбург)",
+          "url": "https://mhd116.iptv2022.com/x/HxLmnZpCN5LXjys1xtSASA,1792565818/streaming/otvekb/324/1/index.m3u8",
+          "timezoneShift": 0,
+          "isHd": false
         }
       ],
       "hasEpg": true,
@@ -7769,6 +7343,12 @@
         {
           "name": "МТВ Волгоград",
           "url": "https://hls-volgograd1vtv.cdnvideo.ru/volgograd1vtv/volgograd1vtv.sdp/playlist.m3u8",
+          "timezoneShift": 0,
+          "isHd": false
+        },
+        {
+          "name": "МТВ (Волгоград)",
+          "url": "https://mhd116.iptv2022.com/x/BzyU1qyGBye78BBKAPIcfg,1792565818/streaming/volgograd1/324/1/index.m3u8",
           "timezoneShift": 0,
           "isHd": false
         }
@@ -12037,29 +11617,6 @@
       ]
     },
     {
-      "id": "ext_590",
-      "baseName": "МТВ (Волгоград)",
-      "name": "МТВ (Волгоград)",
-      "group": "Lime (VPN 🇷🇺)",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/10203/logo_256_1660805812.png",
-      "tvgId": "МТВ (Волгоград)",
-      "slug": "mtv-volgograd-2",
-      "hasArchive": false,
-      "archiveDays": 0,
-      "isWink": false,
-      "sourceType": "open_stream",
-      "hasEpg": false,
-      "isHd": false,
-      "feeds": [
-        {
-          "name": "МТВ (Волгоград)",
-          "url": "https://mhd116.iptv2022.com/x/BzyU1qyGBye78BBKAPIcfg,1792565818/streaming/volgograd1/324/1/index.m3u8",
-          "timezoneShift": 0,
-          "isHd": false
-        }
-      ]
-    },
-    {
       "id": "ext_490",
       "baseName": "Муз ТВ UZ",
       "name": "Муз ТВ UZ",
@@ -12721,29 +12278,6 @@
         {
           "name": "ОСН ТВ",
           "url": "https://mhd116.iptv2022.com/x/QMsGXnEgoG4I-mGIaKmRoQ,1792565818/streaming/osnmedia/324/1/index.m3u8",
-          "timezoneShift": 0,
-          "isHd": false
-        }
-      ]
-    },
-    {
-      "id": "ext_579",
-      "baseName": "ОТВ (Екатеринбург)",
-      "name": "ОТВ (Екатеринбург)",
-      "group": "Lime (VPN 🇷🇺)",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/10241/logo_256.png",
-      "tvgId": "ОТВ (Екатеринбург)",
-      "slug": "otv-ekaterinburg",
-      "hasArchive": false,
-      "archiveDays": 0,
-      "isWink": false,
-      "sourceType": "open_stream",
-      "hasEpg": false,
-      "isHd": false,
-      "feeds": [
-        {
-          "name": "ОТВ (Екатеринбург)",
-          "url": "https://mhd116.iptv2022.com/x/HxLmnZpCN5LXjys1xtSASA,1792565818/streaming/otvekb/324/1/index.m3u8",
           "timezoneShift": 0,
           "isHd": false
         }
@@ -13710,29 +13244,6 @@
         {
           "name": "ТВ Черноморское",
           "url": "http://tv.ttk.mx:9175",
-          "timezoneShift": 0,
-          "isHd": false
-        }
-      ]
-    },
-    {
-      "id": "ext_596",
-      "baseName": "ТВ-ИН (Магнитогорск)",
-      "name": "ТВ-ИН (Магнитогорск)",
-      "group": "Lime (VPN 🇷🇺)",
-      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/10448/logo_256_1660807705.png",
-      "tvgId": "ТВ-ИН (Магнитогорск)",
-      "slug": "tv-in-magnitogorsk-2",
-      "hasArchive": false,
-      "archiveDays": 0,
-      "isWink": false,
-      "sourceType": "open_stream",
-      "hasEpg": false,
-      "isHd": false,
-      "feeds": [
-        {
-          "name": "ТВ-ИН (Магнитогорск)",
-          "url": "https://mhd116.iptv2022.com/x/4zTHvSMakorZaku_cbpliQ,1792565818/streaming/tvin/324/1/index.m3u8",
           "timezoneShift": 0,
           "isHd": false
         }
@@ -17976,6 +17487,222 @@
           "isHd": false
         }
       ]
+    },
+    {
+      "id": "ch_46",
+      "baseName": "Пятый канал +4",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/3/logo_256.webp",
+      "tvgId": "Пятый канал +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятый канал +4",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "pyatyy-kanal-4"
+    },
+    {
+      "id": "ch_47",
+      "baseName": "Пятый канал +7",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/3/logo_256.webp",
+      "tvgId": "Пятый канал +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Пятый канал +7",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "pyatyy-kanal-7"
+    },
+    {
+      "id": "ch_25",
+      "baseName": "ТВЦ +4",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/129/logo_256.webp",
+      "tvgId": "ТВЦ +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВЦ +4",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": false,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "tvts-4"
+    },
+    {
+      "id": "ch_26",
+      "baseName": "ТВЦ +7",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/129/logo_256.webp",
+      "tvgId": "ТВЦ +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "ТВЦ +7",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": false,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "tvts-7"
+    },
+    {
+      "id": "ch_6",
+      "baseName": "Рен ТВ +4",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/113/logo_256.webp",
+      "tvgId": "Рен ТВ +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Рен ТВ +4",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "ren-tv-4"
+    },
+    {
+      "id": "ch_7",
+      "baseName": "Рен ТВ +7",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/113/logo_256.webp",
+      "tvgId": "Рен ТВ +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Рен ТВ +7",
+          "tzShift": 0,
+          "url": "http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "ren-tv-7"
+    },
+    {
+      "id": "ch_32",
+      "baseName": "Домашний +2",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/67/logo_256.webp",
+      "tvgId": "Домашний +2",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний +2",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_2/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "domashniy-2"
+    },
+    {
+      "id": "ch_33",
+      "baseName": "Домашний +4",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/67/logo_256.webp",
+      "tvgId": "Домашний +4",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний +4",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY_4/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "domashniy-4"
+    },
+    {
+      "id": "ch_34",
+      "baseName": "Домашний +7",
+      "group": "Wink",
+      "logo": "https://mbmh5s36ok.a.trbcdn.net/572aecd6-static/channel/67/logo_256.webp",
+      "tvgId": "Домашний +7",
+      "hasArchive": true,
+      "archiveDays": 3,
+      "feeds": [
+        {
+          "fullName": "Домашний +7",
+          "tzShift": 0,
+          "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_7/variant.m3u8",
+          "catchup": "append",
+          "catchupSource": "?offset=-${offset}&utcstart=${timestamp}",
+          "userAgent": "ExoPlayer2/2.37"
+        }
+      ],
+      "hasEpg": true,
+      "isWink": true,
+      "sourceType": "wink",
+      "isHd": false,
+      "slug": "domashniy-7"
     }
   ]
 }

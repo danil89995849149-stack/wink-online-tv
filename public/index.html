@@ -360,23 +360,24 @@
       bottom: 0 !important;
       width: 320px !important;
       max-width: 85% !important;
-      background: rgba(9, 13, 22, 0.9) !important;
+      background: rgba(9, 13, 22, 0.96) !important;
       backdrop-filter: blur(24px) !important;
       -webkit-backdrop-filter: blur(24px) !important;
       border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
-      transform: translateX(100%) !important;
-      visibility: hidden !important;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.25s !important;
-      display: flex !important;
+      display: none !important;
       flex-direction: column !important;
       z-index: 1010 !important;
       pointer-events: auto !important;
       box-shadow: -10px 0 35px rgba(0, 0, 0, 0.75) !important;
+      overflow: hidden !important;
     }
     .player-sidebar.open {
-      transform: translateX(0) !important;
-      visibility: visible !important;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s !important;
+      display: flex !important;
+      animation: slideInRight 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
     .player-sidebar-header {
       display: flex !important;
@@ -528,6 +529,7 @@
       align-items: center !important;
       justify-content: center !important;
       position: relative !important;
+      overflow: hidden !important;
     }
     #tvPlayer {
       width: 100% !important;
