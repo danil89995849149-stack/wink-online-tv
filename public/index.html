@@ -733,20 +733,12 @@
             <!-- Ряд кнопок управления -->
             <div class="controls-row">
               
-              <!-- Левая группа: Звук и быстрая перемотка -->
+              <!-- Левая группа: Звук и громкость -->
               <div class="controls-left">
                 <div class="volume-wrap">
                   <button class="ctrl-btn" id="ctrlMuteBtn" title="Звук (M)">🔊</button>
                   <input type="range" class="volume-slider" id="ctrlVolumeSlider" min="0" max="1" step="0.05" value="1" title="Громкость">
                 </div>
-
-                <!-- Перемотка назад -->
-                <button class="ctrl-btn" id="ctrlRev30" title="Назад 30 сек">↺ 30</button>
-                <button class="ctrl-btn" id="ctrlRev10" title="Назад 10 сек (←)">↺ 10</button>
-                
-                <!-- Перемотка вперед -->
-                <button class="ctrl-btn" id="ctrlFwd10" title="Вперед 10 сек (→)">10 ↻</button>
-                <button class="ctrl-btn" id="ctrlFwd30" title="Вперед 30 сек">30 ↻</button>
               </div>
 
               <!-- Центральная группа: Переключение каналов и Play/Pause (как в standalone) -->
@@ -765,26 +757,14 @@
                   </button>
                 </div>
 
-                <button class="skip-ad-btn" id="ctrlSkipAdBtn" style="display: none;" title="Пропустить рекламный блок">
-                  <span>⏩</span> <span>+90с</span>
-                </button>
-
                 <button class="jump-live-btn" id="ctrlJumpLiveBtn" style="display: none;" title="Вернуться к прямому эфиру">
                   <span>🔴</span> <span>В эфир</span>
                 </button>
               </div>
 
-              <!-- Правая группа: Список каналов в плеере, Скорость, PiP, Fullscreen -->
+              <!-- Правая группа: Список каналов в плеере, PiP, Fullscreen -->
               <div class="controls-right">
                 <button class="ctrl-btn" id="togglePlayerSidebarBtn" title="Список каналов внутри видео (C)" style="font-size: 1.1rem;">📺</button>
-
-                <select class="ctrl-select" id="ctrlSpeedSelect" title="Скорость воспроизведения">
-                  <option value="0.75">0.75x</option>
-                  <option value="1" selected>1.0x</option>
-                  <option value="1.25">1.25x</option>
-                  <option value="1.5">1.5x</option>
-                  <option value="2">2.0x</option>
-                </select>
 
                 <button class="ctrl-btn" id="ctrlPipBtn" title="Картинка в картинке (P)">⧉</button>
                 <button class="ctrl-btn" id="ctrlFullscreenBtn" title="Полноэкранный режим (F)">⛶</button>
@@ -829,8 +809,9 @@
       </div>
       <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; line-height: 2;">
         <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">Space</kbd></td><td>Воспроизведение / Пауза</td></tr>
-        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">← / →</kbd></td><td>Перемотка на 10 сек</td></tr>
-        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">Shift + ← / →</kbd></td><td>Перемотка на 30 сек</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">← / →</kbd></td><td>Переключение телеканалов</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">PgUp / PgDn</kbd></td><td>Предыдущий / Следующий канал</td></tr>
+        <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">C</kbd></td><td>Список каналов внутри видео</td></tr>
         <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">↑ / ↓</kbd></td><td>Регулировка громкости</td></tr>
         <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">F</kbd></td><td>Полноэкранный режим</td></tr>
         <tr><td style="color: var(--text-secondary);"><kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">M</kbd></td><td>Включить / Выключить звук</td></tr>

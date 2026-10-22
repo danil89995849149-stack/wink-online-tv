@@ -75,9 +75,7 @@
 
       this.ui.muteBtn = document.getElementById('ctrlMuteBtn');
       this.ui.volumeSlider = document.getElementById('ctrlVolumeSlider');
-      this.ui.skipAdBtn = document.getElementById('ctrlSkipAdBtn');
       this.ui.jumpLiveBtn = document.getElementById('ctrlJumpLiveBtn');
-      this.ui.speedSelect = document.getElementById('ctrlSpeedSelect');
       this.ui.fullscreenBtn = document.getElementById('ctrlFullscreenBtn');
       this.ui.pipBtn = document.getElementById('ctrlPipBtn');
 
@@ -175,35 +173,9 @@
         this.ui.volumeSlider.addEventListener('input', (e) => this.setVolume(parseFloat(e.target.value)));
       }
 
-      // Перемотка назад/вперед
-      const btnRev10 = document.getElementById('ctrlRev10');
-      const btnFwd10 = document.getElementById('ctrlFwd10');
-      const btnRev30 = document.getElementById('ctrlRev30');
-      const btnFwd30 = document.getElementById('ctrlFwd30');
-
-      if (btnRev10) btnRev10.addEventListener('click', () => this.seekRelative(-10));
-      if (btnFwd10) btnFwd10.addEventListener('click', () => this.seekRelative(10));
-      if (btnRev30) btnRev30.addEventListener('click', () => this.seekRelative(-30));
-      if (btnFwd30) btnFwd30.addEventListener('click', () => this.seekRelative(30));
-
-      // Кнопка пропуска рекламы (+90 секунд)
-      if (this.ui.skipAdBtn) {
-        this.ui.skipAdBtn.addEventListener('click', () => {
-          this.seekRelative(90);
-          if (window.WinkApp) window.WinkApp.showToast('⏩ Реклама пропущена (+90с)');
-        });
-      }
-
-      // Кнопка «К прямому эфиру»
+      // Кнопка «К прямому эфиру» (при просмотре архива)
       if (this.ui.jumpLiveBtn) {
         this.ui.jumpLiveBtn.addEventListener('click', () => this.playLive(this.currentChannel, this.currentFeed));
-      }
-
-      // Скорость воспроизведения
-      if (this.ui.speedSelect) {
-        this.ui.speedSelect.addEventListener('change', (e) => {
-          this.video.playbackRate = parseFloat(e.target.value);
-        });
       }
 
       // Fullscreen & PiP
@@ -631,7 +603,6 @@
           this.ui.statusText.textContent = '⏪ АРХИВ (ЗАПИСЬ)';
         }
         if (this.ui.jumpLiveBtn) this.ui.jumpLiveBtn.style.display = 'flex';
-        if (this.ui.skipAdBtn) this.ui.skipAdBtn.style.display = 'flex';
       } else {
         if (this.ui.programTitle) this.ui.programTitle.textContent = 'Прямая трансляция эфира';
         if (this.ui.statusBadge) {
@@ -641,7 +612,6 @@
           this.ui.statusText.textContent = '🔴 ПРЯМОЙ ЭФИР';
         }
         if (this.ui.jumpLiveBtn) this.ui.jumpLiveBtn.style.display = 'none';
-        if (this.ui.skipAdBtn) this.ui.skipAdBtn.style.display = 'none';
       }
 
       // Индикатор сдвига фида
@@ -744,11 +714,11 @@
           break;
         case 'ArrowLeft':
           e.preventDefault();
-          this.seekRelative(e.shiftKey ? -30 : -10);
+          this.playPrevChannel();
           break;
         case 'ArrowRight':
           e.preventDefault();
-          this.seekRelative(e.shiftKey ? 30 : 10);
+          this.playNextChannel();
           break;
         case 'ArrowUp':
           e.preventDefault();
